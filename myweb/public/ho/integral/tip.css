@@ -1,0 +1,8 @@
+﻿@charset "utf-8";
+
+.soucTips{ float:left; line-height:18px; border:1px solid #e8bebf; background:#ffefef; position:relative;}
+.soucTips em,.soucTips p,.soucTips a{ float:left;}
+.soucTips p strong{ color:#a10000; font-weight:bold;}
+.soucTips em{ display:block; width:22px; height:18px;  background:url(http://i.vanclimg.com/my/2012/share/soucBg.png) no-repeat scroll 6px 3px;}
+.soucTips a{ float:right; display:block; width:11px; height:11px; margin:3px 4px 0px 0px; background:url(http://i.vanclimg.com/my/2012/share/soucBg.png) no-repeat scroll -16px 0px;}
+.soucPoint{ width:11px; height:6px; background:url(http://i.vanclimg.com/my/2012/share/soucBg.png) no-repeat -28px 0px; position:absolute; left:33px; top:18px;}

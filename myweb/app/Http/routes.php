@@ -19,4 +19,5 @@ Route::get('/admin','AdminController@index');
 Route::controller('/admin/user','UserController');
 Route::controller('/admin/type','TypeController');
 //Route::controller('/admin/article','ArticleController');
+Route::controller('/home/center','CenterController');
 

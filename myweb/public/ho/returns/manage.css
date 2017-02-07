@@ -1,0 +1,1154 @@
+﻿.cols_manage #main
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountmain.png) repeat-y center 50%;
+    width: 779px;
+    margin-right: 0px;
+}
+#position
+{
+    margin:-5px 0 5px;
+    color: #888;
+    line-height: 27px;
+    height: 27px;
+}
+#position DT
+{
+    display: inline;
+}
+#position DD
+{
+    display: inline;
+    font-weight:normal;
+}
+#position a:link,#position a:visited
+{
+    color:#888;
+}
+#position a:hover
+{
+    color:#c00;
+}
+
+#wrap #welcome
+{
+    display: inline;
+    float: right;
+    margin: -33px 36px;
+    color: #000;
+}
+#wrap #welcome .btn
+{
+    border-top-width: 0px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 57px;
+    color: #fff;
+    padding-top: 2px;
+    height: 19px;
+    border-right-width: 0px;
+    _height: 21px;
+}
+.mngbox
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountmain.png) no-repeat;
+    width: 779px;
+}
+.mngbox .main
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountmain.png) no-repeat right bottom;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    display: inline-block;
+    width: 740px;
+}
+.mngbox H3
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountcol.png) repeat-x 50% bottom;
+    margin: 0px 0px 15px;
+    height: 24px;
+}
+.mngbox H3 SPAN
+{
+    padding-right: 6px;
+    padding-left: 6px;
+    float: left;
+    padding-bottom: 0px;
+    font: 700 14px/22px "宋体";
+    padding-top: 0px;
+    border-bottom: #92002d 2px solid;
+}
+.jfgz
+{
+    padding-bottom: 0px;
+}
+.jfgz p
+{
+    line-height: 21px;
+}
+.mngbox .cc TD IMG
+{
+    padding-left: 3px;
+}
+.mngbox .bd TD IMG
+{
+    padding-right: 6px;
+}
+UNKNOWN
+{
+    background: #f2f2f2;
+    margin: 10px auto;
+    width: 98%;
+}
+.listtable H4
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.listtable TABLE
+{
+    left: -2px;
+    width: 100%;
+    position: relative;
+    top: -3px;
+}
+.orderdiv DIV
+{
+    left: -2px;
+    width: 100%;
+    position: relative;
+    top: -3px;
+}
+.listtable TH
+{
+    border-right: #d8d8d8 1px solid;
+    padding-right: 5px;
+    border-top: #d8d8d8 1px solid;
+    padding-left: 5px;
+    background: #fff;
+    padding-bottom: 5px;
+    border-left: #d8d8d8 1px solid;
+    padding-top: 5px;
+    border-bottom: #d8d8d8 1px solid;
+}
+.listtable TD
+{
+    border-right: #d8d8d8 1px solid;
+    padding-right: 5px;
+    border-top: #d8d8d8 1px solid;
+    padding-left: 5px;
+    background: #fff;
+    padding-bottom: 5px;
+    border-left: #d8d8d8 1px solid;
+    padding-top: 5px;
+    border-bottom: #d8d8d8 1px solid;
+}
+.listtable TH
+{
+    font-weight: 700;
+    background: #f9f9f9;
+}
+.orderdiv
+{
+    margin: 10px auto;
+}
+.orderdiv DIV
+{
+    border-right: #d8d8d8 1px solid;
+    border-top: #d8d8d8 1px solid;
+    background: #fff;
+    border-left: #d8d8d8 1px solid;
+    border-bottom: #d8d8d8 1px solid;
+}
+.orderdiv H4
+{
+    padding-right: 12px;
+    padding-left: 12px;
+    font-size: 12px;
+    background: #f9f9f9;
+    padding-bottom: 7px;
+    color: #000;
+    padding-top: 7px;
+    border-bottom: #d8d8d8 1px solid;
+}
+.orderdiv P
+{
+    margin: 12px;
+}
+.orderdiv .time P
+{
+    padding-right: 12px;
+    padding-left: 12px;
+    background: #f9f9f9;
+    padding-bottom: 7px;
+    margin: 0px;
+    color: #000;
+    padding-top: 7px;
+}
+.orderdiv .time .func
+{
+    margin-top: -24px;
+    float: right;
+}
+.orderdiv TABLE
+{
+    margin: 9px auto;
+    width: 95%;
+    border-bottom: #d9d9d9 1px solid;
+}
+.orderdiv TH
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+.orderdiv TD
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+.orderdiv TH
+{
+    border-bottom: #d9d9d9 1px solid;
+    text-align: left;
+}
+.orderdiv .total
+{
+    text-align: right;
+}
+.orderdiv .regtable
+{
+    border-top-width: 0px;
+    border-left-width: 0px;
+    left: -2px;
+    border-bottom-width: 0px;
+    margin: 0px;
+    width: 100%;
+    position: relative;
+    top: -3px;
+    border-right-width: 0px;
+}
+.orderdiv .prodtable
+{
+    border-top-width: 0px;
+    border-left-width: 0px;
+    left: -2px;
+    border-bottom-width: 0px;
+    margin: 0px;
+    width: 100%;
+    position: relative;
+    top: -3px;
+    border-right-width: 0px;
+}
+.orderdiv .regtable CAPTION
+{
+    border-right: #e2e2e2 1px solid;
+    padding-right: 7px;
+    border-top: #e2e2e2 1px solid;
+    padding-left: 7px;
+    font-weight: 700;
+    background: #e0e0e0;
+    padding-bottom: 7px;
+    border-left: #e2e2e2 1px solid;
+    padding-top: 7px;
+    border-bottom: #e2e2e2 0px solid;
+    text-align: left;
+}
+.orderdiv .regtable TH
+{
+    border-right: #e2e2e2 1px solid;
+    border-top: #e2e2e2 1px solid;
+    background: #f7f7f7;
+    border-left: #e2e2e2 1px solid;
+    width: 22%;
+    border-bottom: #e2e2e2 1px solid;
+}
+.orderdiv .regtable TD
+{
+    border-right: #e2e2e2 1px solid;
+    border-top: #e2e2e2 1px solid;
+    background: #fff;
+    border-left: #e2e2e2 1px solid;
+    width: 28%;
+    border-bottom: #e2e2e2 1px solid;
+}
+.orderdiv .prodtable TH
+{
+    border-right: #e2e2e2 1px solid;
+    border-top: #e2e2e2 1px solid;
+    background: #fff;
+    border-left: #e2e2e2 1px solid;
+    border-bottom: #e2e2e2 1px solid;
+    text-align: center;
+}
+.orderdiv .prodtable TD
+{
+    border-right: #e2e2e2 1px solid;
+    border-top: #e2e2e2 1px solid;
+    background: #fff;
+    border-left: #e2e2e2 1px solid;
+    border-bottom: #e2e2e2 1px solid;
+    text-align: center;
+}
+.orderdiv .prodtable TH
+{
+    background: #e0e0e0;
+}
+.orderdiv .prodtable .tr2 TD
+{
+    background: #f7f7f7;
+}
+.tips
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/ico_tips.png) no-repeat;
+    font: 13px/18px "宋体";
+    text-indent: 24px;
+}
+#balance P
+{
+    margin: 12px 24px;
+}
+#balance H4
+{
+    background: #fff;
+    font: 12px/3 "宋体";
+    color: #000;
+    text-align: center;
+}
+#giftcard FORM
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/dot_x888.png) repeat-x 50% bottom;
+    padding-bottom: 30px;
+    margin: 0px 0px 18px;
+    padding-top: 0px;
+    text-align: center;
+}
+#giftcard FORM H3
+{
+    margin: 0px 0px 30px;
+}
+#giftcard .input
+{
+    border-right: #7e9db9 1px solid;
+    padding-right: 3px;
+    border-top: #7e9db9 1px solid;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    border-left: #7e9db9 1px solid;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: #7e9db9 1px solid;
+}
+#mdfdata .input
+{
+    border-right: #7e9db9 1px solid;
+    padding-right: 3px;
+    border-top: #7e9db9 1px solid;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    border-left: #7e9db9 1px solid;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: #7e9db9 1px solid;
+}
+#mdfemail .input
+{
+    border-right: #7e9db9 1px solid;
+    padding-right: 3px;
+    border-top: #7e9db9 1px solid;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    border-left: #7e9db9 1px solid;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: #7e9db9 1px solid;
+}
+#mdfpwd .input
+{
+    border-right: #7e9db9 1px solid;
+    padding-right: 3px;
+    border-top: #7e9db9 1px solid;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    border-left: #7e9db9 1px solid;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: #7e9db9 1px solid;
+}
+#address .addadr .input
+{
+    border-right: #7e9db9 1px solid;
+    padding-right: 3px;
+    border-top: #7e9db9 1px solid;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    border-left: #7e9db9 1px solid;
+    width: 160px;
+    padding-top: 3px;
+    border-bottom: #7e9db9 1px solid;
+}
+#giftcard .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#mdfdata .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#mdfemail .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#mdfpwd .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#address .operate .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#address .addadr .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#tmpshelf .btn
+{
+    border-top-width: 0px;
+    padding-left: 6px;
+    border-left-width: 0px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn1.png) no-repeat;
+    border-bottom-width: 0px;
+    width: 47px;
+    color: #fff;
+    height: 20px;
+    border-right-width: 0px;
+}
+#giftcard .total
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    text-align: right;
+}
+#tmpshelf .tips
+{
+    margin: 15px 0px;
+}
+#tmpshelf .operate P
+{
+    margin: 6px 0px;
+    text-align: center;
+}
+#mdfdata DL
+{
+    margin: 15px 0px;
+    overflow: hidden;
+}
+#mdfdata DT
+{
+    margin-top: 3px;
+    float: left;
+    width: 150px;
+    color: #000;
+    text-align: right;
+}
+#mdfdata DD
+{
+    float: left;
+    margin: 0px 0px 15px;
+    width: 480px;
+}
+#mdfdata TEXTAREA.input
+{
+    width: 240px;
+    height: 72px;
+}
+#mdfdata .btn
+{
+    margin-left: 240px;
+}
+#address .addadr .btn
+{
+    margin-left: 240px;
+}
+#mdfemail DL
+{
+    margin: 36px 0px;
+    overflow: hidden;
+}
+#mdfpwd DL
+{
+    margin: 36px 0px;
+    overflow: hidden;
+}
+#mdfemail DT
+{
+    padding-left: 120px;
+    float: left;
+    width: 120px;
+    color: #000;
+    line-height: 1.5;
+}
+#mdfpwd DT
+{
+    padding-left: 120px;
+    float: left;
+    width: 120px;
+    color: #000;
+    line-height: 1.5;
+}
+#mdfemail DD
+{
+    float: left;
+    margin: 0px 0px 15px;
+    width: 410px;
+    line-height: 1.5;
+}
+#mdfpwd DD
+{
+    float: left;
+    margin: 0px 0px 15px;
+    width: 410px;
+    line-height: 1.5;
+}
+#mdfemail .btn
+{
+    margin-left: 30px;
+}
+#mdfpwd .btn
+{
+    margin-left: 30px;
+}
+#address OL LI
+{
+    padding-right: 24px;
+    padding-left: 24px;
+    list-style-position: inside;
+    background: #f3f3f3;
+    padding-bottom: 9px;
+    margin: 15px 0px;
+    padding-top: 9px;
+    list-style-type: decimal;
+}
+#address OL LI P
+{
+    margin: 9px 16px;
+}
+#address .operate
+{
+    text-align: right;
+}
+#address .addadr
+{
+    margin-top: 21px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/dot_x888.png) repeat-x;
+    padding-top: 24px;
+}
+#address .addadr DL
+{
+    margin: 36px 0px;
+    overflow: hidden;
+}
+#address .addadr DT
+{
+    padding-left: 72px;
+    float: left;
+    width: 90px;
+    color: #000;
+    line-height: 1.5;
+}
+#address .addadr DD
+{
+    float: left;
+    margin: 0px 0px 15px;
+    width: 450px;
+    line-height: 1.5;
+}
+#address .addadr .input .adr
+{
+    width: 420px;
+}
+#address .addadr .btn
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_btn2.png);
+    width: 104px;
+}
+#managenav
+{
+    width: 189px;
+    height: auto;
+}
+#managenav DIV
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountnav.png) repeat-y center 50%;
+    margin: 9px 3px;
+    zoom: 1;
+}
+#managenav H3
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountnav.png) no-repeat;
+}
+#managenav H3 SPAN
+{
+    display: block;
+    background: url(http://sslimg.vancl.com/Usercenter/img/col_mng_account.png) no-repeat 30px 10px;
+    text-indent: -999em;
+    height: 43px;
+}
+#managenav .hyjf H3 SPAN
+{
+    background-image: url(http://sslimg.vancl.com/Usercenter/img/col_hyjf_person.png);
+}
+#managenav .prod H3 SPAN
+{
+    background-image: url(http://sslimg.vancl.com/Usercenter/img/col_mng_prod.png);
+}
+#managenav .personal H3 SPAN
+{
+    background-image: url(http://sslimg.vancl.com/Usercenter/img/col_mng_person.png);
+}
+#managenav .recommend H3 SPAN
+{
+    background-image: url(http://sslimg.vancl.com/Usercenter/img/col_mng_recommend.gif);
+}
+#managenav .comment H4 SPAN
+{
+    display: block;
+    background: url(http://sslimg.vancl.com/Usercenter/bg_img/sppl.jpg) no-repeat;
+    text-indent: -999em;
+    height: 43px;
+}
+#managenav .answer H4 SPAN
+{
+    display: block;
+    background: url(http://sslimg.vancl.com/Usercenter/bg_img/spwd.jpg) no-repeat;
+    text-indent: -999em;
+    height: 43px;
+}
+#grmes
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountMesnav.png) repeat-y center 50%;
+    margin: 9px 3px;
+    zoom: 1;
+}
+#grmes P
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountMesnav.png) no-repeat left top;
+    margin: 0px;
+    overflow: hidden;
+    text-indent: -999px;
+}
+#grmes UL
+{
+    padding-right: 9px;
+    padding-left: 15px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountMesnav.png) no-repeat right bottom;
+    padding-bottom: 0px;
+    overflow: hidden;
+    padding-top: 0px;
+}
+#grmes UL LI
+{
+    padding-bottom: 10px;
+    line-height: 160%;
+}
+#managenav UL
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/bg_accountnav.png) no-repeat right bottom;
+    padding-bottom: 9px;
+    overflow: hidden;
+    padding-top: 0px;
+    list-style-type: none;
+    display: block;
+}
+#managenav LI
+{
+    border-top: #e1dfe0 1px dashed;
+    margin-top: -1px;
+    padding-left: 30px;
+    background: url(http://sslimg.vancl.com/Usercenter/img/ico_redsq.png) no-repeat 18px 50%; /*background:url("../../images/share/vancl.plugins/mylist.gif") no-repeat 18px 10px transparent;*/
+    height: 23px;
+    line-height: 23px;
+    list-style-type: none;
+}
+/*#managenav .current {
+  FONT-WEIGHT: 700
+}*/
+#managenav a:hover
+{
+    font-weight: 700;
+}
+#managenav .strong11
+{
+    font-weight: 700;
+}
+.jfstyel4
+{
+    color: #7f0019;
+}
+.jfSTYLE1
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #7f0019;
+}
+.jfSTYLE3
+{
+    font-size: 6px;
+}
+.jflisttable TD
+{
+    text-align: center !important;
+}
+#right
+{
+    padding-right: 0px;
+    padding-left: 7px;
+    float: left;
+    padding-bottom: 0px;
+    width: 782px;
+    color: #333333;
+    padding-top: 25px;
+}
+#right IMG
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+#right .span1
+{
+    padding-left: 6px;
+    background: url(http://sslimg.vancl.com/Usercenter/bg_img/selected.jpg) no-repeat;
+    float: left;
+    width: 140px;
+    cursor: pointer;
+    line-height: 180%;
+    height: 30px;
+    text-align: center;
+}
+#right .span
+{
+    background: url(http://sslimg.vancl.com/Usercenter/bg_img/select.jpg) no-repeat;
+    float: left;
+    width: 145px;
+    cursor: pointer;
+    line-height: 180%;
+    height: 30px;
+    text-align: center;
+}
+.colorStyHS
+{
+    color: #999999;
+}
+.dh
+{
+    margin-left: 11px;
+}
+#right .span P
+{
+    margin-top: 6px;
+}
+#right .span1 P
+{
+    margin-top: 6px;
+}
+.styCCC
+{
+    background: url(http://sslimg.vancl.com/Usercenter/button/cencenCenter.gif) repeat-y left top;
+    width: 782px;
+}
+.styCCC P
+{
+    margin: 0px;
+}
+.Yc
+{
+    padding-left: 4px;
+}
+.plWZ
+{
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-bottom: 7px;
+    padding-top: 20px;
+    border-bottom: #a10000 1px solid;
+}
+.impCont
+{
+    margin: 0px 9px;
+}
+.impCont TD
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.apppraisetd
+{
+    padding-bottom: 0px;
+}
+.fontsize
+{
+    padding-right: 12px;
+    margin-top: -36px;
+    font-size: 12px;
+    float: right;
+}
+#managenav .unsubscribe H3
+{
+    background: url(http://sslimg.vancl.com/Usercenter/img/emailtitle.gif) no-repeat 0px 0px;
+}
+#managenav .unsubscribe H3 SPAN
+{
+    background: none transparent scroll repeat 0% 0%;
+}
+.emlteldetail
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.emlteldetail H2
+{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #7d7d7d;
+}
+.emlteldetail H2 SPAN
+{
+    color: #a10000;
+}
+.liwu
+{
+    width: 721px;
+    height: 33px;
+    border: 1px solid #E9E9E9;
+    padding-left: 12px;
+    padding-top: 10px;
+    color: #7D7D7D;
+    margin-top: 10px;
+}
+.liwu img
+{
+    margin-right: 10px;
+    float: left;
+    margin-top: -2px;
+}
+.liwu strong
+{
+    color: #A10000;
+    padding-right: 10px;
+}
+.liwu input
+{
+    width: 102px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+    background: url(http://sslimg.vancl.com/MyVancl/2011/biao2.gif) center no-repeat;
+    border: 0;
+    margin-left: 10px;
+    display: inline;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.liwu span
+{
+    color: #FFB300;
+}
+.liwu span.cu
+{
+    font-weight: 700;
+    padding-right: 16px;
+}
+.liwu b
+{
+    color: #7D7D7D;
+    padding-right: 10px;
+    color: #535353;
+}
+
+/*gaidong*/
+#daren H3 SPAN
+{
+    background: url(http://sslimg.vancl.com/myvancl/2011/darengl.png) no-repeat scroll 30px 10px transparent;
+    display: block;
+    height: 43px;
+    text-indent: -999em;
+}
+
+#managenav #User_Order_List
+{
+    height: auto;
+}
+
+.div02
+{
+    width: 208px;
+    border-bottom-style: none;
+    border-top-color: #a91000;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-left-color: #a91000;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #a91000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div01
+{
+    width: 332px;
+    border-bottom-style: none;
+    border-top-color: #a91000;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-left-color: #a91000;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #a91000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.close02
+{
+    margin-top: 4px;
+    margin-left: 190px;
+    padding-bottom: 4px;
+}
+.close01
+{
+    margin-top: 4px;
+    margin-left: 314px;
+    padding-bottom: 4px;
+}
+.font01
+{
+    width: 332px;
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+}
+.font01 div
+{
+    float: left;
+    width: 332px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.font01 span
+{
+    font-family: "宋体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #a91000;
+    display: block;
+    float: left;
+    width: 200px;
+    text-align: left;
+}
+.font01 label
+{
+    font-family: "宋体";
+    font-size: 12px;
+    color: #a91000;
+}
+.font02
+{
+    width: 208px;
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+}
+.font02 span
+{
+    font-family: "宋体";
+    font-size: 14px;
+    font-weight: bold;
+    color: #a91000;
+}
+.font02 a:link
+{
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: none;
+}
+.font02 a:visited
+{
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: none;
+}
+.font02 a:hover
+{
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: underline;
+}
+.font02 a:active
+{
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: none;
+}
+.submitBTN
+{
+    background-image: url(/MyImages/submitBTN.jpg);
+    width: 97px;
+    height: 24px;
+    line-height: 24px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+    border: 0px;
+    margin-bottom: 10px;
+}
+.bot02
+{
+    width: 210px;
+    height: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bot01
+{
+    width: 334px;
+    height: 9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnBTN
+{
+    background-image: url(/MyImages/btnBtn.jpg);
+    width: 97px;
+    height: 24px;
+    line-height: 24px;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #a91000;
+    text-align: center;
+    border: 0px;
+}
+.font01 img
+{
+    display: block;
+    float: left;
+    padding-top: 0px;
+    padding-right: 5px;
+    margin-left: 100px !important;
+    _margin-left: 50px;
+}
+.font01 span label
+{
+    font-family: "宋体";
+    color: #333333;
+    font-size: 12px;
+    font-weight: normal;
+}
+.but01
+{
+    display: inline;
+    width: 97px;
+    clear: both;
+    padding-right: 10px;
+}
+.butAll
+{
+    width: 332px;
+    padding-bottom: 10px;
+}
+#shaidan
+{
+    overflow-y:hidden;
+    overflow-x:hidden; padding-bottom:20px;
+}
+#shaidan iframe
+{
+    border: 0;
+    height:800px;
+    width: 740px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
