@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0036)http://shopping.vancl.com/MediaV.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js(6).ashx"></script>
+    <script type="text/javascript">
+        //        var idghtml = "http://page.vanclimg.com/mediav/iframe.html?title=shopping&clothescode=";
+        var skus = ""; 
+    </script>
+    <script type="text/javascript">
+//        var _mvq = _mvq || [];
+//        _mvq.push(['$setAccount', 'm-184-0']);
+//        _mvq.push(['$logConversion']);
+//        (function () {
+//            var mvl = document.createElement('script');
+//            mvl.type = 'text/javascript'; mvl.async = true;
+//            mvl.src = 'http://material.mediav.com/bjjs/mba_ka.js';
+//            var s = document.getElementsByTagName('script')[0];
+//            s.parentNode.insertBefore(mvl, s);
+//        })();	
+    </script>
+    <script type="text/javascript">
+//        var _mvq = _mvq || [];
+//        _mvq.push(['$setGeneral', 'cartview', '', '', '']);
+ 
+//        $.getJSON('http://minicart.vancl.com/DealMiniShoppingServer.asmx/GetMiniJsonDataForMediaV?callback=?',
+//        function (data) {
+//            var dataCount = data.TotalCount;
+//            for (var i = 0; i < dataCount; i++) {
+//                skus += data.Data[i];
+//                if (i != dataCount - 1) {
+//                    skus += "|";
+//                }
+//                _mvq.push(['$addItem', '', data.Data[i], '', '', '']);
+//            }
+//            _mvq.push(['$logData']);
+//            $("#idg").attr("src", idghtml += skus);
+//        });
+//        _mvq.push(['$logData']);
+    </script>
+    <script type="text/javascript">
+        var pageUrl = "http://page.vanclimg.com/mediav/iframe.html?account_id=zampda&pageid=89&pagetype=myCartPage&productcode=";
+        var options = { userId: 0,
+            indexPage: 1,
+            pageSize: 99,
+            shoppingcart: '',
+            shoppingpointcart: '',
+            shoppingPresent: ''
+        };
+
+        var url = "http://minicart.vancl.com/DealMiniShoppingServer.asmx/GetMiniJsonDataByPage?callback=?";
+        $.ajax({
+            contentType: "application/json;utf-8",
+            url: url,
+            data: options,
+            dataType: 'json',
+            success: function (result) {
+                if (typeof (result) != 'undefined' && result != null && result.TotalCount > 0) {
+                    $.each(result.data, function (i) {
+                        var productCode = this["ProductUrl"].substr(this["ProductUrl"].lastIndexOf("\/") + 1, 7);
+                        if (pageUrl.indexOf(productCode) == -1) {
+                            pageUrl = pageUrl + productCode + ",";
+                        }
+                    });
+                    $("#pagex").attr("src", pageUrl.substr(0, pageUrl.length - 1));
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <iframe id="pagex" style="display: none" src="./iframe(1).html"></iframe>
+    <iframe id="idg" style="display: none" src="./saved_resource(1).html"></iframe>
+
+
+</body></html>
