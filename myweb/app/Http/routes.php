@@ -23,6 +23,5 @@ Route::controller('/home/center','CenterController');
 Route::controller('/admin/goods','GoodsController');
 Route::controller('/admin/picdetail','PicdetailController');
 Route::controller('/admin/orders','OrdersController');
-
-
+Route::controller('/home','IndexController');
 
