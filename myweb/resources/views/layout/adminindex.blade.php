@@ -283,6 +283,27 @@
                             <li><a href="/admin/type/add">添加分类</a></li>
                         </ul>
                     </li>
+                      <li>
+                        <a href="#"><i class="icon-t-shirt"></i>商品管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/goods/index"> 浏览商品</a></li>
+                            <li><a href="/admin/goods/add">添加商品</a></li>
+                        </ul>
+                    </li>
+                      <li>
+                        <a href="#"><i class="icon-google-plus"></i>商品详情管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/picdetail/index"> 浏览商品详情</a></li>
+                            <li><a href="/admin/picdetail/add">添加商品详情</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-archive"></i>订单管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/orders/index"> 浏览订单</a></li>
+                            <li><a href="/admin/orders/huishou"> 回收订单</a></li>
+                        </ul>
+                    </li>
                      <li>
                         <a href="#"><i class="icon-list-2"></i>文章分类</a>
                         <ul class='closed'>

@@ -194,5 +194,6 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
-
+     
+     'upload_dir'=>'./upload/'
 ];

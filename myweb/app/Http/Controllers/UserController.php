@@ -22,7 +22,7 @@ class UserController extends Controller
 
     	// 1. 验证表单数据
     	$this->validate($request, [
-	        'username' => 'required|unique:users', // 账号必填
+	        'username' => 'required|unique:username', // 账号必填
 	        'name'=>'required',
 	        'repass'=>'same:pass|required',
 	        'email'=>'required|email'
@@ -47,7 +47,7 @@ class UserController extends Controller
     	// 3.数据插入
     	$res=DB::table('users')->insert($data);
     	if($res){
-    		return redirect('/admin/user/index')->with('success','添加成功'); //session('success'=>'添加成功');
+    		return redirect('/admin/users/index')->with('success','添加成功'); //session('success'=>'添加成功');
     	}else{
     		return back()->with('error','添加失败'); //withInput 闪存
     		//session(['error'=>'添加失败']); session('error');
@@ -61,7 +61,7 @@ class UserController extends Controller
     	// 查询数据
     	$data=DB::table('users')->where(function($query) use($request){ 
     	// use 给当前匿名函数引入外部的$request变量
-    	// query 就是数据库users的模型
+    	// query 就是数据库user的模型
     		if($request->input('keyword')){
     			// 按照name字段封装搜索
     			$query->where('username','like','%'.$request->input('keyword').'%')
@@ -76,7 +76,7 @@ class UserController extends Controller
     	return view('user.index',['list'=>$data,'request'=>$request->all()]);
     }
     // 删除数据
-    public function getDel($id){
+    public function getDel($id){    
     	$res=DB::table('users')->where('id',$id)->delete();
     	if($res){
     		return redirect('/admin/user/index')->with('success','删除成功');
