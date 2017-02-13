@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::get('/admin','AdminController@index');
 Route::controller('/admin/user','UserController');
 Route::controller('/admin/type','TypeController');
-//Route::controller('/admin/article','ArticleController');
+Route::controller('/admin/article','ArticleController');
 Route::controller('/home/center','CenterController');
+Route::controller('/home','LoginController');
+//测试验证码
+Route::get('/code','LoginController@code');
+Route::controller('/home/register','RegisterController');
 
