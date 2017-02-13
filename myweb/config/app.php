@@ -197,6 +197,8 @@ return [
 		
 
     ],
-	
+
+     
+     'upload_dir'=>'./upload/'
 
 ];

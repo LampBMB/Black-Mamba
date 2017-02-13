@@ -14,9 +14,9 @@ class LoginController extends Controller
     public function getIndex(){
     	return view('home.login');
     }
-    //执行普通登陆
-    public function postDologin(){
-    	
+    //执行普通登陆 验证登录 账号 密码 符合验证规则
+    public function postDologin(Request $request){
+    	dd($request -> all());
     }
     //测试验证码
     public function code(){

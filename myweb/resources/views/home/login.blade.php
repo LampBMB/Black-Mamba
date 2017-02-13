@@ -38,7 +38,7 @@
             <!--tag-->
             <div id="shows">
                 <div class="user_infor" style="display: block;">
-                    <form action="/home/dologin" method="post">
+                    <form action="/home/login/dologin" method="post">
                     {{csrf_field()}}
                     <div id="vanclLoginError" class="tips">
                         用户名或者密码错误!
@@ -48,7 +48,7 @@
                             请输入用户名
                         </label>
                         
-                        <input id="vanclUserName" name="vanclUserName" type="text" value="" class="inputtextcolor">
+                        <input id="vanclUserName" name="name" type="text" value="" class="inputtextcolor">
                     </div>
                     <div id="vanclUserNameError" class="tips">
                         用户名不能为空!
@@ -57,7 +57,7 @@
                         <label style="z-index: 10;">
                             请输入密码
                         </label>
-                        <input id="vanclPassword" name="vanclPassword" type="password" class="inputtextcolor" value="">
+                        <input id="vanclPassword" name="pass" type="password" class="inputtextcolor" value="">
                     </div>
                     <div id="vanclPasswordError" class="tips">
                         密码不能为空!

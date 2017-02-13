@@ -34,6 +34,13 @@ class Typecontroller extends Controller
 
     // 执行插入
     public function postInsert(Request $request){
+        
+        $this->validate($request, [
+            'name' => 'required'// 分类必填
+        ],[
+            'name.required'=>'请输入商品分类',
+        ]);
+
     	
     		
     	if($request->input('id')==0){
@@ -99,6 +106,12 @@ class Typecontroller extends Controller
     }
     // 执行修改
     public function postUpdate(Request $request){
+        $this->validate($request, [
+            'name' => 'required'// 分类必填
+        ],[
+            'name.required'=>'请输入商品分类',
+        ]);
+
     	$res=DB::table('types')->where('id',$request->input('id'))->update($request->only('name'));
     	if($res){
     		return redirect('/admin/type/index')->with('success','修改成功');
