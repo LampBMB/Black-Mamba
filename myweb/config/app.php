@@ -197,8 +197,7 @@ return [
 		
 
     ],
-
-     
-     'upload_dir'=>'./upload/'
+    'upload_dir'=>'./upload/',
+	'com'=>'凡客商城'
 
 ];

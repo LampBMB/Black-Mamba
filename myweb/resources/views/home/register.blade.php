@@ -4,7 +4,7 @@
 	
         凡客诚品 - 会员免费注册
 </title>
-    <link rel="shortcut icon" href="https://ssl.vanclimg.com/common/favicon/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="https://democss.vancl.com/css.ashx?href=[/index/global.css,vanclcommon2012.css],[/login/footer.css]&amp;v=121211">
+    
     
     <script type="text/javascript" language="javascript" src="/ho/register/register/js.ashx"></script>
     
@@ -13,45 +13,25 @@
 </head>
 <body id="body" class="wrapper">
     <div id="top" style="margin:10px 0 0 0;padding:0 0 10px 0; border-bottom:solid 1px #919191;">
-        <img src="/ho/register/register/logo_new.jpg" alt="凡客诚品" title="凡客诚品" onclick="javascript:window.location.href=&#39;http://www.vancl.com&#39;" style="cursor:pointer"></div>
+        <a href="/home"><img src="/ho/register/register/logo_new.jpg" alt="凡客诚品" title="凡客诚品"></a></div>
     <!--logo-->
     
-    <form method="post" action="https://login.vancl.com/login/reg.aspx?http%3a%2f%2fwww.vancl.com%2f" id="myform">
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI2NDk4ODUyMGRkjukFnF0HIzatMwwY3WjD37gso+o=">
-</div>
-
+    <form method="post" action="/home/register/doregister" id="myform">
+	{{csrf_field()}}
     <span class="box15"></span>
     <div class="regist">
         <h1>
-            注册新用户 <span>我已经注册，现在就<a href="https://login.vancl.com/login/Login.aspx?http://www.vancl.com/?http%3A%2F%2Fwww.vancl.com%2F">登录</a></span>
+            注册新用户 <span>我已经注册，现在就<a href="/home/login">登录</a></span>
         </h1>
         <div style="width: 100%; height: 10px; overflow: hidden; clear: both;">
         </div>
         <div class="content_left">
-            <div class="tag clearfix">
-                <h2>
-                    选择注册方式：</h2>
-                <ul id="tags">
-                    
-                    
-                    <li class="tb-email" onclick="TabChange(&#39;email&#39;);return false;">使用Email注册</li>
-                    <li class="tb-phone tb-phone-select" onclick="TabChange(&#39;phone&#39;);return false">使用手机号注册</li>
-                </ul>
-            </div>
+          
             <!--tag-->
             <div class="infor clearfix" style="overflow: inherit">
                 
                 <div class="email">
                     <ul id="v2regListInfo_bar">
-                        <li id="liemail" style="display: none;" class="v2reg_bg1">
-                            <label>
-                                Email地址：</label>
-                            <div class="v2regListInfo_rtCont">
-                                <input type="text" name="textfield" id="input_email" class="reginput_01">
-                                <span class="box3" style="display: none;"></span><span class="v2reg_tips02" style="display: none;"></span><span class="box5" style="display: none;"></span>
-                            </div>
-                            <span class="Rclear"></span></li>
                         <li id="liphone" style="zoom: 1; display: list-item;" class="v2reg_bg">
                             <div class="v2regListInfo_rtCont" style="position: relative; zoom: 1;">
                                 
@@ -59,35 +39,13 @@
                                     <label>
                                         请输入手机号
                                     </label>
-                                    <input maxlength="11" type="text" value="" name="textfield" id="input_phone" tabindex="1">
+                                    <input maxlength="11" type="text" value="" name="phone" id="input_phone" tabindex="1">
                                 </div>
-                                <a href="https://login.vancl.com/login/reg.aspx?http%3A%2F%2Fwww.vancl.com%2F#" class="asPhoneregBtn sprite_a">获取短信验证码</a>
-                                <div class="v2regList_Btnimg" style="display: none">
-                                    <img align="absmiddle" src="/ho/register/register/loading.gif">
-                                    正在发送...
-                                </div>
-                                <div class="iFloatingwindow">
-                                    <p class="iFloatingIco">
-                                        <img src="/ho/register/register/regico.png"></p>
-                                    <dl>
-                                        <dd>
-                                            <p class="inviteTips_ft" style="width: auto">
-                                                <img src="/ho/register/register/inviteico.gif">请输入验证码！</p>
-                                        </dd>
-                                        <dd>
-                                            <img id="img_phonevalidate" src="/ho/register/register/CalculateValidateCode.ashx" width="145px" height="53px" style="cursor: pointer;"></dd>
-                                        <span class="clear"></span>
-                                        <p style="padding-left: 63px;">
-                                            <span class="ftgry6"><a class="grayft6" href="javascript:void(0)" style="cursor: pointer;">看不清？换一张</a></span></p>
-                                        <dd>
-                                            <input type="text" class="iFloatingInput" value="" id="input_phonevalidate"></dd>
-                                        <dd class="inviteTips_img">
-                                            <a href="javascript:void(0)">
-                                                <img src="/ho/register/register/inviteBtn.gif"></a></dd>
-                                    </dl>
-                                    <span class="clear"></span>
-                                </div>
-                                
+                                    <a href="#" onclick="return false" class="asPhoneregBtn" id="SmsCode" style="display: block">
+                        获取短信验证码</a>
+                    <div class="asPhoneregBtn" style="display: none" id="sendedSmsCode">
+                        已发送
+                    </div>
                                 <span class="box3" style="display: none;"></span><span class="v2reg_tips02" style="display: none;"></span><span class="box5" style="display: none;"></span>
                             </div>
                             <span class="Rclear"></span></li>
@@ -99,7 +57,7 @@
                                     <label>
                                         填写手机验证码
                                     </label>
-                                    <input name="textfield" id="input_phonecode" type="text" value="" maxlength="6" tabindex="2">
+                                    <input name="phonecode" id="phonecode" type="text" value="" maxlength="6" tabindex="2">
                                 </div>
                                 <span class="box3" style="display: none;"></span><span class="v2reg_tips01" style="display: none;"></span><span class="box5" style="display: none;"></span>
                             </div>
@@ -112,7 +70,7 @@
                                     <label>
                                         设定登录密码
                                     </label>
-                                    <input maxlength="16" type="password" name="textfield" id="input_password" value="" tabindex="3">
+                                    <input maxlength="16" type="password" name="phonepass" id="input_password" value="" tabindex="3">
                                 </div>
                                 <span class="box3" style="display: none;"></span>
                                 <div class="v2reg_Safetyinfo" style="display: none;">
@@ -131,41 +89,24 @@
                                     <label>
                                         再次输入密码
                                     </label>
-                                    <input maxlength="16" type="password" name="textfield" id="input_repassword" value="" tabindex="4">
+                                    <input maxlength="16" type="password" name="rephonepass" id="input_repassword" value="" tabindex="4">
                                 </div>
-                                <span class="box3" style="display: none;"></span><span class="v2reg_tips01" style="display: none;"></span><span class="box5" style="display: none;"></span>
                             </div>
-                            <span class="Rclear"></span></li>
-                        <li id="livalidatecode" style="height: 75px; display: none;" class="v2reg_bg1">
-                            <!-- display: none; -->
-                            
-                            
-                            <div class="v2regListInfo_rtCont" style="position: relative;">
-                                <div id="_yanzhenma" class="newtxt" style="width: 410px;">
-                                    <label style="height: 45px; width: 150px; margin: 0px;">
-                                        验证码
-                                    </label>
-                                    <input maxlength="6" type="text" name="textfield" id="input_validatecode" class="reginput_02" style="width: 150px;">
-                                    <img border="0" src="/ho/register/register/CalculateValidateCode.ashx" id="img_validatecode" style="right: -1px; position: absolute; cursor: pointer;">
-                                </div>
-                                <span class="box3" style="display: none;"></span><span class="v2reg_tips02" style="display: none;"></span><span class="box5" style="display: none;"></span>
-                            </div>
-                            <span class="Rclear"></span></li>
-                        <li class="v2reg_bg1">
-                            <div class="v2reg_bt">
-                                <span>
-                                    <input id="chk_agreen" type="checkbox" onclick="chkfn.call(this)">
-                                    <label for="chk_agreen" style="width: 100%; float: none;">
-                                        请阅读<a target="_blank" href="http://help.vancl.com/Category/69-1.html" class="reda10_ft12">《VANCL凡客诚品服务条款》</a></label></span>
-                                <span class="box10"></span><a href="javascript:">
-                                    <div id="submitRegister_false" class="submitStyle" style="background: #9A9A9A; color: #FFFFFF;">
-                                        立即注册</div>
-                                </a><a href="javascript:" onclick="$(&#39;#submitRegister&#39;).click();return false;" style="display: none;">
-                                    <div id="submitRegister" class="submitStyle">立即注册</div>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                            	@if(!empty(session('error')))<!--只有session('errors')存在才会输出错误信息-->
+								<div id="tishi1" style="clear:both;width:220px;min-height:16px;line-height:16px;color:#A10000;text-indent:30px;background:url(https://ssl.vanclimg.com/login/login_spritesbg.png) -351px -662px no-repeat;background-color:#FFF6F7;border:1px solid #CC9998;margin-left:48px;display:block;visibility:visible;">
+								{{session('error')}}
+								</div>
+								@endif
+                       
+                           
+                               
+                                <span class="box10"></span>     
+									<input type="submit" value="立即注册" class="submitStyle" style="background: #b42025; color: #FFFFFF;">
+									</form>
+                               
+       
+                      
+                </ul>
                 </div>
                 <!--email-->
             </div>
@@ -185,6 +126,22 @@
     <input name="hdn_ResourceHref" id="hdn_ResourceHref_name" type="hidden" value="http://www.vancl.com/?http%3A%2F%2Fwww.vancl.com%2F">
     <!--wrapper-->
     </form>
+	<script type="text/javascript" src="/ho/login/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+		 $('#SmsCode').click(function (){
+            $(this).css('display','none');
+            $('#sendedSmsCode').css('display','block');
+             var phone = $(this).prev().find('input').val();
+            $.ajax({
+                url:'/home/register/phone',
+                data:{'phone':phone},
+                success:function (mes){
+                   
+                }
+            });
+        });
+		
+	</script>
     <script type="text/javascript">
         function hoverinput(id, fun) {
             var jqobj = $("#" + id);

@@ -74,6 +74,7 @@ a,area{blr:expression(this.onFocus=this.blur());}/*For IE*/
     font-weight: bolder;}
 .user_infor	{ width:415px; padding:10px 30px 10px;}
 .tips{clear:both;width:220px;min-height:16px;line-height:16px;color:#A10000;text-indent:30px;background:url(https://ssl.vanclimg.com/login/login_spritesbg.png) -351px -662px no-repeat;background-color:#FFF6F7;border:1px solid #CC9998;margin-left:48px;display:block;visibility:hidden;}
+#tishi1{clear:both;width:220px;min-height:16px;line-height:16px;color:#A10000;text-indent:30px;background:url(https://ssl.vanclimg.com/login/login_spritesbg.png) -351px -662px no-repeat;background-color:#FFF6F7;border:1px solid #CC9998;margin-left:48px;display:block;visibility:hidden;}
 .user_infor{width:415px;padding:10px 20px 10px;}
 .user_infor p 	{ padding:2px 0;}
 .user_infor p label	{ color:#656565;}

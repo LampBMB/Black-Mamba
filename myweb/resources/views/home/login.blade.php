@@ -12,7 +12,7 @@
 <body>
     <center>
         <div id="Head" align="left">
-            <a class="logo" href="http://www.vancl.com/"></a>
+            <a href="/home"><img src="/ho/login/logo_new.jpg" alt="凡客诚品" title="凡客诚品"></a>
             <p>
                 <a href="http://help.vancl.com/" target="_blank">帮助</a>
             </p>
@@ -24,7 +24,7 @@
                 height: 25px; line-height: 25px; float: right; margin: 0 100px 0 0; width: 400px;
                 position: relative;">
                 凡客 Vancl 登录 <span style="font-size: 14px; font-weight: normal; position: absolute;
-                    right: 0px; bottom: 0px;">没有账户免费<a id="gotoReg" href="javascript:void(0);" style="color: #b42025;
+                    right: 0px; bottom: 0px;">没有账户免费<a href="/home/register" style="color: #b42025;
                         margin: 0px;">注册</a> </span>
             </h3>
         </div>
@@ -50,7 +50,7 @@
                         
                         <input id="vanclUserName" name="name" type="text" value="" class="inputtextcolor">
                     </div>
-                    <div id="vanclUserNameError" class="tips">
+                    <div id="nameerror" class="tips">
                         用户名不能为空!
                     </div>
                     <div id="_upwd" class="newtxt">
@@ -59,22 +59,16 @@
                         </label>
                         <input id="vanclPassword" name="pass" type="password" class="inputtextcolor" value="">
                     </div>
-                    <div id="vanclPasswordError" class="tips">
+                    <div id="passworderror" class="tips">
                         密码不能为空!
                     </div>
-                    <!-- <p id="pValidate" style="display:none" class="newtxt">
-                        <label style="color: rgb(172, 172, 172); z-index: 10;">
-                            验证码</label><input maxlength="6" style="width: 155px; height: 48px; border: 0 none;
-                                text-indent: 10px;" id="calculatevalidate" name="calcultatevalidate" type="text" class="inputtextcolor" value="">
-                        <img oldsrc="/code" src="/code" style="/* vertical-align: middle; */width: 145px; height: 53px; cursor: pointer;
-                            position: absolute; right: 0px; top: 0px; z-index: 11;">
-                        <a style="cursor: pointer; float: right; line-height: 18px;" href="javascript:void(0)">
-                            看不清?换一张</a>
-                    </p>
-                    <div id="validateError" style="display: none" class="tips">
-                        验证码不能为空!
-                    </div> -->
-                    
+                    @if(!empty(session('error')))<!--只有session('errors')存在才会输出错误信息-->
+                    <div class="mws-form-message error" style="clear:both;width:220px;min-height:16px;line-height:16px;color:#A10000;text-indent:30px;background:url(https://ssl.vanclimg.com/login/login_spritesbg.png) -351px -662px no-repeat;background-color:#FFF6F7;border:1px solid #CC9998;margin-left:48px;display:block;">
+                        <ul>
+                            <li>{{session('error')}}</li>
+                        </ul>
+                    </div>
+                    @endif
                     <div class="bt">
                         <a class="forget" href="https://login.vancl.com/login/GetPwdStep1.aspx">找回密码</a>
                         <div class="clear">
@@ -90,13 +84,15 @@
                 ****************************************************
                  -->
                 <div class="user_infor" style="display: none">
+                    <form action="/home/login/phonelogin" method="post">
+                    {{csrf_field()}}
                     <div id="_quickmobile" class="newtxt" style="width: 250px; float: left;">
                         <label style="z-index: 10;">
                             输入手机号
                         </label>
                         <input id="_quickmobilenumber" maxlength="11" name="vanclUserName" type="text" value="">
                     </div>
-                    <a href="javascript:void(0);" class="asPhoneregBtn" id="getSmsCode" style="display: block">
+                    <a href="#" onclick="return false" class="asPhoneregBtn" id="SmsCode" style="display: block">
                         获取短信验证码</a>
                     <div class="asPhoneregBtn" style="display: none" id="sendedSmsCode">
                         已发送
@@ -110,7 +106,7 @@
                         <label style="width: 142px; height: 43px; line-height: 43px; border: 1px solid rgb(203, 203, 203); z-index: 10;">
                             验证码
                         </label>
-                        <input id="_quickpiccode" name="vanclUserName" type="text" value="" style="width: 142px;
+                        <input id="piccode" name="code" type="text" value="" style="width: 142px;
                             border: solid 1px #cbcbcb; height: 43px; line-height: 43px;">
                         <img onclick='this.src=this.src+"?id="+Math.random()' src="/code" style="cursor: pointer; vertical-align: middle; width: 140px; height: 45px; position: absolute;
                             top: 0; left: 137px;" id="img">
@@ -125,14 +121,16 @@
                         <label style="z-index: 10;">
                             请输入手机验证码
                         </label>
-                        <input id="_quickmobilevalidcode" name="vanclUserName" type="text" value="">
+                        <input id="_quickmobilevalidcode" name="phonecode" type="text" value="">
                     </div>
-                    <div id="_quickmobilecodemsg" class="tips">
-                        请输入有效的手机号码!
+                    <div id="tishi1">
+                        图片验证码不正确！
                     </div>
+					
                     <div class="bt">
-                       <input type="submit" class="log" value="登录">
+                       <input type="submit" class="log" value="登录" id="Log">
                     </div>
+                    </form>
                 </div>
                 <!-- 横线 -->
                 <div class="lines">
@@ -215,6 +213,50 @@
 	</div>
     </center>
     <!--Bottom End-->
+    <script type="text/javascript" src="/ho/login/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+
+        $('#Log').click(function (){
+			var flag = true;
+            var code = $('#piccode').val();
+            var phonecode = $('#_quickmobilevalidcode').val();
+            // if(session('code')!=code){
+            //     alert('aa');
+            // }
+             $.ajax({
+                url:'/home/login/piccode',
+                data:{'code':code,'phonecode':phonecode},
+                success:function (mes){
+					if(mes==1){
+						$('#tishi1').html('图片验证码不正确').css('visibility','visible');
+					}else if(mes==2){
+						$('#tishi1').html('手机验证码不正确').css('visibility','visible');
+					}else{
+						flag = false;
+					}
+                }
+			
+            });
+			if(flag){
+				return false;
+			}
+            
+        });
+        $('#SmsCode').click(function (){
+            $(this).css('display','none');
+            $('#sendedSmsCode').css('display','block');
+             var phone = $(this).prev().find('input').val();
+            $.ajax({
+                url:'/home/login/phone',
+                data:{'phone':phone},
+                success:function (mes){
+                    if(mes){
+
+                    }
+                }
+            });
+        });
+    </script>
     <script type="text/javascript">
         var kan = document.getElementById('kan');
         var img = document.getElementById('img');
@@ -224,15 +266,15 @@
         };
     </script>
     <script type="text/javascript">
-        function openUrl(type) {
-            var curUrl = document.URL.toLowerCase();
-            if (curUrl.indexOf('https://') != -1) {
-                openwindow("https://api-login.vancl.com/redirect/" + type + "?callbackurl=https://login.vancl.com/login/ReceiveCallback.aspx", "siteWin", "950", "850");
-            }
-            else {
-                openwindow("http://api-login.vancl.com/redirect/" + type + "?callbackurl=http://login.vancl.com/login/ReceiveCallback.aspx", "siteWin", "950", "850");
-            }
-        }
+        // function openUrl(type) {
+        //     var curUrl = document.URL.toLowerCase();
+        //     if (curUrl.indexOf('https://') != -1) {
+        //         openwindow("https://api-login.vancl.com/redirect/" + type + "?callbackurl=https://login.vancl.com/login/ReceiveCallback.aspx", "siteWin", "950", "850");
+        //     }
+        //     else {
+        //         openwindow("http://api-login.vancl.com/redirect/" + type + "?callbackurl=http://login.vancl.com/login/ReceiveCallback.aspx", "siteWin", "950", "850");
+        //     }
+        // }
         function openwindow(url, name, iWidth, iHeight) {
             var url; //转向网页的地址;
             var name; //网页名称，可为空;
