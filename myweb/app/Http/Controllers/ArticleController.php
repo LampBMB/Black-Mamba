@@ -13,4 +13,8 @@ class ArticleController extends Controller
    		// 文章类型   文章的标题  文章的描述  文章图片  文章内容
    		return view('article.add');
    	}
+	public function getIndex(){
+   		// 文章类型   文章的标题  文章的描述  文章图片  文章内容
+   		return view('article.index');
+   	}
 }

@@ -41,7 +41,7 @@
                     <a href="http://my.vancl.com/User/UserInfo" class="track" name="my_boot_userinfo_updateavatar">
                         <img src="/ho/center/vancl300.jpg" width="90" height="90"></a>
                     <span class="head_pic" style="display: inline;">
-                        <a href="http://my.vancl.com/User/UserInfo" class="track" name="my_boot_userinfo_updateavatar">修改头像</a></span>
+                        <a href="/home/userinfo/edit" class="track" name="my_boot_userinfo_updateavatar">修改头像</a></span>
                 </div>
             </div>
             <a href="http://my.vancl.com/User/UserInfo" class="track" name="my_boot_useinfo_edituserinfo">编辑个人资料</a></div>
@@ -50,7 +50,7 @@
             <div class="nickname-panel nickname-panel12">
                 <div class="nickname-info member-info">
                     <a id="anickname">您好！
-                        <em id="bNickName">13141288800</em></a>
+                        <em id="bNickName">{{session('home')[0]['username']}}</em></a>
                     <a id="modify" href="http://my.vancl.com/#" class="track" name="my_boot_useinfo_Modify">(修改)</a>
                     <div id="member" style="display: none;">
                         <a href="javascript:void(0);" class="track member memberimg" name="my_boot_useinfo_level">

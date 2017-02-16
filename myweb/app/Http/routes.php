@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/admin','AdminController@index');
 Route::controller('/admin/user','UserController');
 Route::controller('/admin/type','TypeController');
+
 Route::controller('/admin/goods','GoodsController');
 Route::controller('/admin/picdetail','PicdetailController');
 Route::controller('/admin/orders','OrdersController');
@@ -40,7 +41,24 @@ Route::any('/home/order/orderok','OrderController@orderok');
 // 执行添加下单地址
 Route::controller('/home/address','AddressController');
 
-// 前台主页
-Route::controller('/home','IndexController');//放在最下
+Route::controller('/admin/article','ArticleController');
+//测试验证码
+Route::get('/code','LoginController@code');
+//前台登录
+Route::controller('/home/login','LoginController');
+//前台注册
+Route::controller('/home/register','RegisterController');
+//前台用户个人中心
+Route::controller('/home/userinfo','UserinfoController');
+Route::controller('/admin/goods','GoodsController');
+Route::controller('/admin/picdetail','PicdetailController');
+Route::controller('/admin/orders','OrdersController');
+Route::group(['middleware'=>'login'],function (){
+	//前台个人中心
+	Route::controller('/home/center','CenterController');
+});
+//前台主页
+Route::controller('/home','IndexController');
+
 
 
