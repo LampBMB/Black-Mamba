@@ -14,14 +14,33 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// 搭建后台主页
+// 搭建后台
 Route::get('/admin','AdminController@index');
 Route::controller('/admin/user','UserController');
 Route::controller('/admin/type','TypeController');
-//Route::controller('/admin/article','ArticleController');
-Route::controller('/home/center','CenterController');
 Route::controller('/admin/goods','GoodsController');
 Route::controller('/admin/picdetail','PicdetailController');
 Route::controller('/admin/orders','OrdersController');
-Route::controller('/home','IndexController');
+
+// 搭建前台
+// 个人中心
+Route::controller('/home/center','CenterController');
+
+// 购物车
+Route::controller('/home/shopping','ShopController');
+
+// 选择下单地址  any->这个路由可以使用post方式和get方式请求
+Route::any('/home/order/add','OrderController@add');
+
+// 生成订单
+Route::post('/home/order/insert','OrderController@insert');
+
+Route::any('/home/order/orderok','OrderController@orderok');
+
+// 执行添加下单地址
+Route::controller('/home/address','AddressController');
+
+// 前台主页
+Route::controller('/home','IndexController');//放在最下
+
 
