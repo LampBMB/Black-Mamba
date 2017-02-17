@@ -126,12 +126,12 @@
                         <span><em>您目前可享受全场购物免运费</em></span>
                     </div>
                     <div class="summary" style="margin-left:2px";>产品金额总计(不含运费)：
-                        <span class="amount">￥<em>00.00</em></span>
+                        <span class="amount">￥<em>00.00</em> 元</span>
                     </div>
                 
                     <div class="btn-panel">
                         <a href="/" class="go-buy track" name="sp_cart_mycar_goBuy">&lt;&lt;继续购物</a> 
-                        <a class="checkout track" href="/home/order/add" id="sp_cart_mycar_goPay">去结算&gt;&gt;</a>
+                        <a class="checkout track" href="/home/order/add" id="sp_cart_mycar_goPay" onclick="return false">去结算&gt;&gt;</a>
                     </div>
                 </div>
             </div>
@@ -217,15 +217,28 @@
             var xiaoji=parseInt($(this).html());
             cou+=xiaoji;
         });
-        $('.amount em').html(cou+' 元');
+        $('.amount em').html(cou);
 
         $('.modify-product-qty').each(function(){
             var sl=parseInt($(this).html());
-            total+=sl;  
+            total+=sl;
+
         });
         $('.slzj em').html(total);
     }
     count();
+
+    $('#sp_cart_mycar_goPay').click(function(){ 
+        var zongjia=$('.amount em').html();
+        if(zongjia==0){
+            $(this).attr('onclick','return false');
+            alert('请添加商品');
+            // alert('请选购商品');
+        }else{
+            $(this).attr('onclick','return true');
+        }
+        
+    });
 
 
 </script>

@@ -120,10 +120,8 @@
                             <a name="hp-hp-classhotsearch-1_1-v:n" class="track" href="http://s.vancl.com/search?k=%E5%85%8D%E7%83%AB%E8%A1%AC%E8%A1%AB&amp;orig=3" target="_blank">免烫衬衫</a>
                             <a name="hp-hp-classhotsearch-1_2-v:n" class="track" href="http://s.vancl.com/search?k=%E7%BE%BD%E7%BB%92%E6%9C%8D&amp;orig=3" target="_blank">羽绒服</a>
                             <a name="hp-hp-classhotsearch-1_3-v:n" class="track" href="http://s.vancl.com/search?k=%E7%BE%8A%E6%AF%9B%E5%A4%A7%E8%A1%A3&amp;orig=33" target="_blank">羊毛大衣</a>
-                            <a name="hp-hp-classhotsearch-1_6-v:n" class="track" href="http://s.vancl.com/search?k=%E6%99%BA%E8%83%BD%E6%B8%A9%E6%8E%A7&amp;orig=3" target="_blank">智能温控</a>
-                            <a name="hp-hp-classhotsearch-1_4-v:n" class="track" href="http://item.vancl.com/6374138.html" target="_blank">户外鞋</a>
-                            <a name="hp-hp-classhotsearch-1_5-v:n" class="track" href="http://s.vancl.com/search?k=%E4%BC%91%E9%97%B2%E8%A3%A4&amp;orig=3" target="_blank">休闲裤</a>
-                            <a name="hp-hp-classhotsearch-1_6-v:n" class="track" href="http://s.vancl.com/search?k=%E8%B7%91%E6%AD%A5T&amp;orig=3" target="_blank">跑步T恤</a></p>
+                            
+                        </p>
                     </div>
                 </div>
             </div>

@@ -23,17 +23,18 @@ class CenterController extends Controller
 
 	// 加载我的订单模板
 	public function getOrder(){
-		$userid=1; //session获取
-		// $list=[];
-		// $data=DB::table('orders as o')->join('shopping as s','o.addtime','=','s.addtime')->where('o.userid',$userid)->select('s.*','o.*','o.addtime as time')->get();
+		$userid=session('home')[0]['id']; //session获取
 		$data=DB::table('orders')->where('userid',$userid)->get();
-		// dd($data);
-		// dd($order);
-		// $list[0]['addtime']=$data[0]['addtime'];
-		// $list[0]['addressid']=$data[0]['addressid'];
-		// $list[0]['1']=$data;
+		foreach($data as $k=>$v){
+			if($userid==$v['userid']){
+				$intime=$v['intime'];
+				$aid=$v['addressid'];
+			}
+			$data[$k][]=DB::table('shopping')->where('addtime',$intime)->get();
+			$data[$k][]=DB::table('addresses')->where('id',$aid)->get();
 
-		// dd($list);
+		}
+
 		return view('center.order',['data'=>$data]);
 	}
 
@@ -44,7 +45,9 @@ class CenterController extends Controller
 
 	// 加载收货地址模板
 	public function getPlace(){
-		return view('center.place');
+		$userid=session('home')[0]['id'];
+		$data=DB::table('addresses')->where('user_id',$userid)->get();
+		return view('center.place',['data'=>$data]);
 	}
 
 	// 加载积分模板

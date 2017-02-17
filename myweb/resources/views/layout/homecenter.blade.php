@@ -24,7 +24,7 @@
         <link type="text/css" rel="stylesheet" href="/ho/center/css(10).ashx">
         <link type="text/css" rel="stylesheet" href="/ho/center/css(11).ashx">
         <link href="/ho/center/acceptlist.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="/ho/center/js(1).ashx"></script>
+        <!-- <script type="text/javascript" src="/ho/center/js(1).ashx"></script> -->
         <style type="text/css">
             body { font-size: 12px !important; } .newitenforsafecenteonly { background: url("http://i.vanclimg.com/header/20120309/spritesbg.png") no-repeat scroll 0 0 transparent; background-position: -190px -132px; width: 100px; } #Head a:hover { text-decoration: none; }#account{width:779px;float:right;color:Black;} #account H3 {background: url("http://i.vanclimg.com/my/2012/recommand/bg_accountcol.png") repeat-x scroll 50% bottom transparent;height: 24px;margin: 0 0 10px;} #account H3 SPAN {border-bottom: 2px solid #92002D;float: left;font: 700 14px/22px "宋体";padding: 0 6px;} .listtable{width:100%!important;} .listtable1227 tr td { text-align:center;}
         </style>
@@ -392,14 +392,14 @@
                 </ul>
             </div>
             <link type="text/css" rel="stylesheet" href="/ho/center/css(2).ashx">
-            <script type="text/javascript" src="/ho/center/js(2).ashx"></script>
+            <!-- <script type="text/javascript" src="/ho/center/js(2).ashx"></script> -->
             <style>/*1214*/ .blank30 { clear: both; display: block; font-size: 1px; overflow: hidden; height: 30px; } .AsecurityBox0212 { width: 781px; } .AsecurityBox0212 .aslevel { margin-left: 15px; } .asLevelUl a.withoutVaLink12 { color: #a10000; padding-left: 6px; } .AsecurityBox0212 .aslevelAtart { color: #999 !important; } .AsecurityBox0212 .asLevelUl li { margin: 0px 5px 0px 13px; float: left; display: inline; } .my_cont12 { border: none; padding: 0px 0px 0px 10px; width: 775px; } .my_txt12 { width: 667px; } .nickname-panel12 { width: 667px; } .vjia12 { color: #333; } .AsecuryMessage12 em { font-style: normal; color: #666; } .AsecuryMessage12 em.mal1230 { margin-left: 30px; } .AsecuryMessage12 a { color: #a10000; } .my_pic a.myPicEdit12 { line-height: 50px; } .txt212 { border: 1px solid #dcdcdc; width: 460px; float: left; background: #f8f8f8; } .txt212 .orderStatusul12 li { height: 36px; line-height: 36px; border-bottom: 1px dotted #999; width: 308px; padding-left: 20px; color: #333; } .txt212 .orderStatusul12 li .padr1220 { padding-right: 20px; } .txt212 .orderStatusul12 li a span { color: #a10000; } .txt212 .orderStatusul12 li.orderStatusli1201 { width: 440px; font-weight: bold; } .txt212 .orderStatusul12 li.orderStatusli1202 { border-right: 1px dotted #999; } .txt212 .orderStatusul12 li.orderStatusli1203 { border-bottom: none; } .txt212 .orderStatusul12 li .red12 { color: #a10000; } .txt212 .orderStatusul12 li .grey12 { color: #666; } .txt212 .orderStatusul12 li .rules20120112 { font-weight: bold; padding-left: 23px; } .vancladmin_recomtitle12 li { width: 132px; padding-left: 25px; line-height: 29px; text-align: left; float: left; background: url(http://i.vanclimg.com/my/2012/recommand/menu_bg.gif) no-repeat left top; margin-right: 2px; font-size: 12px; font-weight: bold; color: #666; } .vancladmin_recomtitle12 .on { width: 132px; text-align: left; padding-left: 25px; } .vancladmin_recomtitle12 li.vancladminrecomtitleLiMore { background: none; width: auto; float: right; margin-right: 3px; display: inline; } .inviteTable12 { margin-top: 0px; border-top: none; } #menubox ul.vancladmin_recomtitle12 { overflow: hidden; border-bottom: 3px #8e0000 solid; width: 785px; } #menubox ul.vancladmin_recomtitle12 li { width: 132px; padding-left: 25px; line-height: 29px; text-align: left; float: left; background: url(http://i.vanclimg.com/my/2012/recommand/menu_bg.gif) no-repeat left top; margin-right: 2px; font-size: 12px; font-weight: bold; } #menubox ul.vancladmin_recomtitle12 .mrnone { margin: 0; } #menubox ul.vancladmin_recomtitle12 a, #menubox ul.vancladmin_recomtitle12 a:visited { color: #666; } #menubox ul.vancladmin_recomtitle12 .on { width: 132px; background: url(http://i.vanclimg.com/my/2012/recommand/menuon_bg.gif) no-repeat left top; color: #fff; cursor: pointer; } #menubox ul.vancladmin_recomtitle12 .on a, #menubox ul.vancladmin_recomtitle12 .on a:visited { color: #fff; } #menubox ul.vancladmin_recomtitle12 li.vancladminrecomtitleLiMore { background: none; width: auto; float: right; margin-right: 3px; display: inline; } #menubox ul.vancladmin_recomtitle12 li.vancladminrecomtitleLiMore a { color: #a10000; } .inviteTable12 { margin-top: 0px; border-top: none; } .opinion12, .opinion13 { background: url(http://i.vanclimg.com/my/2012/boot/yjtop.jpg) no-repeat; width: 36px; height: 93px; display: block; } .opinion13 { background-position: 0px -95px; margin-top: 3px; } /*0108*/ .rv1_tuijianlist02 { float: left; width: 739px; } .rv1_tuijianlist02 li { float: left; margin-left: 10px; display: inline; } .vancladminBtLeft, .vancladminBtRight { width: 21px; height: 100px; background: url(http://i.vanclimg.com/my/2012/boot/scrollbtn.jpg) no-repeat 0px 0px; float: left; margin-top: 29px; display: inline-block; text-indent: -9999px; cursor: pointer; overflow: hidden; } .vancladminBtRight { background-position: -33px 0px; float: right; }
             </style>
 @section('con')
 @show
             <!-- <script type="text/javascript" src="/ho/center/js(3).ashx"></script> -->
             <script src="/ho/center/ajaxLoadpage.js" type="text/javascript"></script>
-            <script src="/ho/center/jquery.tmpl.min.js" type="text/javascript"></script>
+            <!-- <script src="/ho/center/jquery.tmpl.min.js" type="text/javascript"></script> -->
             <script id="zftemplate" type="text/x-jquery-tmpl">
                 <li> 
                     <p class = "v1_recohotpic"> 
@@ -455,23 +455,23 @@
                         var epc = $("#hdnExcludeProductCode").val();
                         var epc_is_changed = false;
 
-                        $(data.Items).each(function(index) {
-                            if (data.Items[index] == null) {
-                                return;
-                            }
-                            data.Items[index].ProductUrl = "http://item.vancl.com/" + data.Items[index].ProductCode.toString() + ".html";
-                            $("#zftemplate").tmpl(data.Items[index]).appendTo($("[fid=recommandlist]"));
-                            //Tab切换时，处理推荐Tab对应的ProductCode们
-                            if (("," + epc + ",").indexOf("," + data.Items[index].ProductCode.toString() + ",") == -1) {
-                                epc_is_changed = true;
-                                if (epc == "") {
-                                    epc = data.Items[index].ProductCode.toString();
-                                } else {
-                                    epc += "," + data.Items[index].ProductCode.toString();
-                                }
-                            }
-                            //end-11
-                        });
+                        // $(data.Items).each(function(index) {
+                        //     if (data.Items[index] == null) {
+                        //         return;
+                        //     }
+                        //     data.Items[index].ProductUrl = "http://item.vancl.com/" + data.Items[index].ProductCode.toString() + ".html";
+                        //     $("#zftemplate").tmpl(data.Items[index]).appendTo($("[fid=recommandlist]"));
+                        //     //Tab切换时，处理推荐Tab对应的ProductCode们
+                        //     if (("," + epc + ",").indexOf("," + data.Items[index].ProductCode.toString() + ",") == -1) {
+                        //         epc_is_changed = true;
+                        //         if (epc == "") {
+                        //             epc = data.Items[index].ProductCode.toString();
+                        //         } else {
+                        //             epc += "," + data.Items[index].ProductCode.toString();
+                        //         }
+                        //     }
+                        //     //end-11
+                        // });
                         //Tab切换时，若有新ProductCode出现
                         if (epc_is_changed) {
                             $("#hdnExcludeProductCode").val(epc);
