@@ -30,7 +30,7 @@
     			<div class="mws-form-row">
     				<label class="mws-form-label">电话</label>
     				<div class="mws-form-item">
-    					<input class="small" type="text" name="phone" value="{{$list['phone']}}">
+    					<input class="small" type="text" name="phone" value="{{$list['vip']}}">
     				</div>
     			</div>
     		</div>
@@ -42,6 +42,36 @@
     				</div>
     			</div>
     		</div>
+             <div class="mws-form-inline">
+                <div class="mws-form-row">
+                    <label class="mws-form-label">会员等级</label>
+                    <div class="mws-form-item clearfix">
+                        <ul class="mws-form-list inline">
+                            <li>
+                                <input type="radio" name="vip" value="0" 
+                                    @if($list['vip']==0)
+                                        checked
+                                    @endif
+                                ><label>超级管理员</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vip" value="1"
+                                    @if($list['vip']==1)
+                                        checked
+                                    @endif
+                                ><label>普通管理员</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vip" value="1"
+                                    @if($list['vip']==2)
+                                        checked
+                                    @endif
+                                ><label>普通会员</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="mws-form-inline">
                 <div class="mws-form-row">
                     <label class="mws-form-label">状态</label>

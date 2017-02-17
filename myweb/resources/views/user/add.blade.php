@@ -57,6 +57,30 @@
     				</div>
     			</div>
     		</div>
+            <div class="mws-form-inline">
+                <div class="mws-form-row">
+                    <label class="mws-form-label">会员等级</label>
+                    <div class="mws-form-item clearfix">
+                        <ul class="mws-form-list inline">
+                            <li>
+                                <input type="radio" name="vip" value="0" 
+                                   
+                                ><label>超级管理员</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vip" value="1"
+                                   
+                                ><label>普通管理员</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="vip" value="1"
+                                   checked
+                                ><label>普通会员</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     		<div class="mws-button-row">
     			<input value="添加" class="btn btn-danger" type="submit">
     			<input value="重置" class="btn " type="reset">

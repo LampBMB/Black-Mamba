@@ -2,7 +2,7 @@
 @section('con')
 <div class="mws-panel grid_8">
 	<div class="mws-panel-header">
-		<span><i class="icon-table"></i> Data Table with Numbered Pagination</span>
+		<span><i class="icon-table"></i> 用户浏览</span>
 	</div>
 	<div class="mws-panel-body no-padding">
 		<div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
@@ -53,6 +53,7 @@
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 133px;" aria-label="Browser: activate to sort column ascending">用户名</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 124px;" aria-label="Platform(s): activate to sort column ascending">邮箱</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 82px;" aria-label="Engine version: activate to sort column ascending">电话</th>
+				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">会员等级</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">状态</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
 			    </tr>
@@ -69,6 +70,15 @@
 				        <td class=" ">{{$v['username']}}</td>
 				        <td class=" ">{{$v['email']}}</td>
 				        <td class=" ">{{$v['phone']}}</td>
+				         <td class=" ">
+				        	@if($v['vip']==0)
+				        		超级管理员
+							@elseif($v['vip']==1)
+								普通管理员
+							@else
+								普通会员
+							@endif
+				        </td>
 				        <td class=" ">
 				        	@if($v['status']==1)
 				        		启用
@@ -77,7 +87,7 @@
 							@endif
 				        </td>
 				        <td class=" ">
-				        	<a class="icon-pencil" href="/admin/user/edit/{{$v['id']}}"> 修改 </a>&nbsp;&nbsp;&nbsp;&nbsp;
+				        	<a class="icon-pencil" href="/admin/user/edit/{{$v['id']}}"> 修改 </a>&nbsp;&nbsp;
 				        	<a class="icon-remove" href="/admin/user/del/{{$v['id']}}"> 删除 </a>
 				        </td>
 				    </tr>

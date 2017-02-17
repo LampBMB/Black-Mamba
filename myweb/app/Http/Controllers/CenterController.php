@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -23,7 +23,19 @@ class CenterController extends Controller
 
 	// 加载我的订单模板
 	public function getOrder(){
-		return view('center.order');
+		$userid=session('home')[0]['id']; //session获取
+		$data=DB::table('orders')->where('userid',$userid)->get();
+		foreach($data as $k=>$v){
+			if($userid==$v['userid']){
+				$intime=$v['intime'];
+				$aid=$v['addressid'];
+			}
+			$data[$k][]=DB::table('shopping')->where('addtime',$intime)->get();
+			$data[$k][]=DB::table('addresses')->where('id',$aid)->get();
+
+		}
+
+		return view('center.order',['data'=>$data]);
 	}
 
 	// 加载商品评价模板
@@ -33,7 +45,9 @@ class CenterController extends Controller
 
 	// 加载收货地址模板
 	public function getPlace(){
-		return view('center.place');
+		$userid=session('home')[0]['id'];
+		$data=DB::table('addresses')->where('user_id',$userid)->get();
+		return view('center.place',['data'=>$data]);
 	}
 
 	// 加载积分模板

@@ -97,144 +97,28 @@
         <div id="mws-user-tools" class="clearfix">
         
         	<!-- Notifications -->
-        	<div id="mws-user-notif" class="mws-dropdown-menu">
-            	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
-                
-                <!-- Unread notification count -->
-                <span class="mws-dropdown-notif">35</span>
-                
-                <!-- Notifications dropdown -->
-                <div class="mws-dropdown-box">
-                	<div class="mws-dropdown-content">
-                        <ul class="mws-notifications">
-                        	<li class="read">
-                            	<a href="#">
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="read">
-                            	<a href="#">
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="unread">
-                            	<a href="#">
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="unread">
-                            	<a href="#">
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mws-dropdown-viewall">
-	                        <a href="#">View All Notifications</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    
             
             <!-- Messages -->
-            <div id="mws-user-message" class="mws-dropdown-menu">
-            	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
-                
-                <!-- Unred messages count -->
-                <span class="mws-dropdown-notif">35</span>
-                
-                <!-- Messages dropdown -->
-                <div class="mws-dropdown-box">
-                	<div class="mws-dropdown-content">
-                        <ul class="mws-messages">
-                        	<li class="read">
-                            	<a href="#">
-                                    <span class="sender">John Doe</span>
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="read">
-                            	<a href="#">
-                                    <span class="sender">John Doe</span>
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="unread">
-                            	<a href="#">
-                                    <span class="sender">John Doe</span>
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        	<li class="unread">
-                            	<a href="#">
-                                    <span class="sender">John Doe</span>
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mws-dropdown-viewall">
-	                        <a href="#">View All Messages</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      
             
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
             
             	<!-- User Photo -->
             	<div id="mws-user-photo">
-                	<img src="/ad/example/profile.jpg" alt="User Photo">
+                	<a href="/admin/userinfo"><img src="{{session('home')[0]['picname']}}" alt="User Photo"></a>
                 </div>
                 
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        Hello, John Doe
+                        Hello, <a href="/admin/userinfo">{{session('home')[0]['username']}}</a>
                     </div>
                     <ul>
-                    	<li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
+                    	<li><a href="/home">前台</a></li>
+                        <li><a href="">修改密码</a></li>
+                        <li><a href="/home/login/outlogin">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -301,9 +185,9 @@
                         <a href="#"><i class="icon-archive"></i>订单管理</a>
                         <ul class='closed'>
                             <li><a href="/admin/orders/index"> 浏览订单</a></li>
-                            <li><a href="/admin/orders/huishou"> 回收订单</a></li>
                         </ul>
                     </li>
+
                       <li>
                         <a href="#"><i class="icon-picture"></i>轮播图管理</a>
                         <ul class='closed'>
@@ -316,7 +200,7 @@
                         <ul class='closed'>
                             <li><a href="/admin/article/index"> 浏览商品问题</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

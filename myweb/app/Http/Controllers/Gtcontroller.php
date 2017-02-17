@@ -83,7 +83,7 @@ class Gtcontroller extends Controller
                ->select('goods.id as goodsid','goods.goods','goods.price','goods.picname','picdetail.size','picdetail.color')
                ->where('picdetail.id',$picid)
                ->get();
-         $goods[0]['userid']=1;
+         $goods[0]['userid']=session('home')[0]['id'];
          $goods[0]['addtime']=time();
          $goods[0]['state']=1;
          $goods[0]['num']=1;
@@ -103,7 +103,7 @@ class Gtcontroller extends Controller
                ->select('goods.id as goodsid','goods.goods','goods.price','goods.picname','picdetail.size','picdetail.color')
                ->where('picdetail.id',$id)
                ->get();
-         $goods[0]['userid']=1;
+         $goods[0]['userid']=session('home')[0]['id'];
          $goods[0]['addtime']=time();
          $goods[0]['state']=1;
          $goods[0]['num']=1;

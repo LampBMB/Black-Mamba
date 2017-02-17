@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
+
    	public function getIndex(Request $request){
 
         $data=\DB::table('goodswhat')
@@ -43,7 +44,7 @@ class ArticleController extends Controller
 
      $data=$request->except('_token');
      // dd($data);
-     $data['aduserid']=1;
+     $data['aduserid']=session('home')[0]['id'];
      $data['hftime']=time();
      $res=DB::table('goodswhat')->where('id',$data['id'])->update($data);
      if($res){
@@ -62,8 +63,9 @@ class ArticleController extends Controller
    	   $data['goodsid']=$goodsid;
    	   $data['twtime']=time();
    	   $data['status']=0;
-       $data['userid']=1;
+       $data['userid']=session('home')[0]['id'];
        $res=DB::table('goodswhat')->insert($data);
        return back();
    } 
+
 }

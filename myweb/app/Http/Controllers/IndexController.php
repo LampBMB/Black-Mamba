@@ -54,20 +54,5 @@ class IndexController extends Controller
       // $data
       return view('layout.lunbo',['list'=>$data]);
    }
-
-   public static function getSousuo(Request $request){
-
-      $data=\DB::table('types')
-              ->where(function($query) use ($request){
-          //封装搜索条件
-              if($request->input('keyword')){
-                $query->where('name','like','%'.$request->input('keyword').'%');
-              }
-            })
-            ->select('id')->get();
-            dd($data);
-              
-      return view('layout.',['request'=>$request->all()]);
-   }
-    
+  
 }

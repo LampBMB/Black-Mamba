@@ -21,6 +21,8 @@
         <link rel="stylesheet" type="text/css" charset="utf-8" href="/ho/shop/css(2).ashx">
         <link href="/ho/shop/popupdialog.css" type="text/css" rel="stylesheet" id="popuplogincss">
         <script type="text/javascript" src="/ho/shop/ld.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
+        <style type="text/css">h3{font-weight:bold;}</style>
 </head>
     <body class="mycart">
         <div class="shade"></div>
@@ -33,7 +35,22 @@
                         <a href="http://help.vancl.com/" target="_blank">帮助中心</a>
                     </div>
                     <div class="account">
-                            <p>您好，<span class="username">1314*****00</span><a class="logout" href="https://login.vancl.com/login/userloginout.aspx">退出登录</a>|<a class="switch" href="https://login.vancl.com/login/login.aspx?http://shopping.vancl.com/mycart">更换用户</a></p>
+					    @if(session('home'))
+                            <div id="welcome" class="top loginArea">您好,
+                                <a href="/home/userinfo" class="top track" name="head-denglu" style="color: rgb(51, 51, 51);">{{session('home')[0]['username']}}</a>
+                                <span style="color: #a10000">
+                                    <a class="top track" style="color: #a10000" href="/home/login/outlogin" target="_parent">退出登录</a>&nbsp;|&nbsp;
+                                    <a class="track" name="head-ghyh" href="javascript:VANCL.Global.login();" style="color: #a10000">更换用户</a></span>
+                            </div>
+						@else
+							<div id="welcome" class="top loginArea"> 您好,<span class="top">欢迎光临凡客诚品！&nbsp;</span>
+								<span>
+								<a href="/home/login" class="top track">登录</a>&nbsp;|&nbsp;
+								<a href="/home/register" class="track">注册</a>
+								</span>
+							</div>
+						@endif
+                           
 
                     </div>
             </div>
