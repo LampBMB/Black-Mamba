@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Model\Goods;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -40,14 +41,16 @@ class GoodsController extends Controller{
         	'price'=>'required',
         	'picname'=>'required',
         	'descr'=>'required',
-        	'state'=>'required'
+        	'state'=>'required',
+            'szie'=>'required'
         ],[
             'goods.required'=>'请输入商品名称',
             'typeid.required'=>'请选择商品种类',
             'price.required'=>'请输入商品价格',
             'picname.required'=>'请添加商品图片',
             'descr.required'=>'请添加商品描述',
-            'state.required'=>'请选择商品状态'
+            'state.required'=>'请选择商品状态',
+            'szie.required'=>'请选择主图位置'
         ]);
 
     	$goods->goods=$request->input('goods');
@@ -55,6 +58,8 @@ class GoodsController extends Controller{
     	$goods->price=$request->input('price');
         $goods->descr=$data['descr'];
     	$goods->state=$request->input('state');
+        $goods->szie=$request->input('szie');
+
 
     	//上传图片
     	if($request->hasFile('picname')){
@@ -90,7 +95,8 @@ class GoodsController extends Controller{
         	//封装搜索条件
         	if($request->input('keyword')){
         		$query->where('goods','like','%'.$request->input('keyword').'%')
-        		->orwhere('price','like','%'.$request->input('keyword').'%');
+        		->orwhere('price','like','%'.$request->input('keyword').'%')
+                ->orwhere('state','like','%'.$request->input('keyword').'%');
         	}
         })->paginate($request->input('num',5));
         //生成分页
@@ -187,4 +193,29 @@ class GoodsController extends Controller{
 	        }
 	    }
     }
+
+    public function delDetail($id){
+        $g=\DB::table('picdetail')->where('goodsid',$id)->get();
+         
+        DB::table('picdetail')->where('goodsid',$id)->delete();
+            // 删除编译器上传的图片
+    }
+
+    public function Dellb($id){
+        // dd($id);
+        $g=\DB::table('lunbo')->where('goodsid',$sid)->get();
+        // dd($g);
+        //执行删除该商品
+        if(\DB::table('lunbo')->where('goodsid',$id)->delete()){
+
+            if(file_exists('.'.$g['picname'])){
+                unlink('.'.$g['picname']);
+            }
+            return redirect('/admin/lunbo/index')->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败');
+
+        }
+    }
+
 }

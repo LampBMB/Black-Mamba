@@ -304,11 +304,17 @@
                             <li><a href="/admin/orders/huishou"> 回收订单</a></li>
                         </ul>
                     </li>
-                     <li>
-                        <a href="#"><i class="icon-list-2"></i>文章分类</a>
+                      <li>
+                        <a href="#"><i class="icon-picture"></i>轮播图管理</a>
                         <ul class='closed'>
-                            <li><a href="/admin/article/index"> 浏览文章</a></li>
-                            <li><a href="/admin/article/add">添加文章</a></li>
+                            <li><a href="/admin/lunbo/index"> 浏览图片</a></li>
+                            <li><a href="/admin/lunbo/add">添加图片</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#"><i class="icon-list-2"></i>商品提问管理</a>
+                        <ul class='closed'>
+                            <li><a href="/admin/article/index"> 浏览商品问题</a></li>
                         </ul>
                     </li>
                 </ul>

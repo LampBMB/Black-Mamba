@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -11,12 +11,14 @@ class IndexController extends Controller
 {
 	// 加载商城主页模板
     public function getIndex(){
-    	return view('welcome');
-    }
 
-    // 加载商品分类模板(主页导航跳转页面)
-    public function getGoodtype(){
-    	return view('home.goodtype');
+        $data=DB::table('goods')->where('typeid',11)->get();
+        // dd($data);
+        $data1=DB::table('goods')->where('typeid',29)->get();
+
+        $data2=DB::table('goods')->where('typeid',30)->get();
+        
+        return view('welcome',['list'=>$data,'list1'=>$data1,'list2'=>$data2]);
     }
 
     // 加载商品详情页
@@ -33,4 +35,39 @@ class IndexController extends Controller
     public function getAddress(){
     	return view('home.address');
     }
+
+    public static function daohang(){
+        $type=DB::table('types')->where('pid','=',0)->get();
+            // dd($type);
+        foreach($type as $k=>$v){
+            $type[$k]['son']=[];
+            $type1=DB::table('types')->where('pid',$v['id'])->get();
+            $type[$k]['son']=$type1;
+        }
+        // dd($type);
+       return view('layout.daohang',['type'=>$type]);
+   }
+
+   public static function lunbo(){
+      $data=DB::table('lunbo')->get();
+      // dd($data);
+      // $data
+      return view('layout.lunbo',['list'=>$data]);
+   }
+
+   public static function getSousuo(Request $request){
+
+      $data=\DB::table('types')
+              ->where(function($query) use ($request){
+          //封装搜索条件
+              if($request->input('keyword')){
+                $query->where('name','like','%'.$request->input('keyword').'%');
+              }
+            })
+            ->select('id')->get();
+            dd($data);
+              
+      return view('layout.',['request'=>$request->all()]);
+   }
+    
 }
