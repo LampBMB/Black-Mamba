@@ -21,6 +21,8 @@
         <link rel="stylesheet" type="text/css" charset="utf-8" href="/ho/shop/css(2).ashx">
         <link href="/ho/shop/popupdialog.css" type="text/css" rel="stylesheet" id="popuplogincss">
         <script type="text/javascript" src="/ho/shop/ld.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.8.3.js"></script>
+        <style type="text/css">h3{font-weight:bold;}</style>
 </head>
     <body class="mycart">
         <div class="shade"></div>

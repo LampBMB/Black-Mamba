@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h4>城市级联</h4>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript" src="./area.js"></script>
+	<script type="text/javascript" src="./location.js"></script>
+	
+	<!--层级联动选择框-->
+	<select id="loc_province" style="width:80px;"></select>
+	<select id="loc_city"  style="width:100px;"></select>
+	<select id="loc_town" style="width:120px;"></select>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			showLocation();
+		});
+	</script>			
+</body>
+</html>
