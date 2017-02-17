@@ -14,20 +14,29 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// 搭建后台
-Route::get('/admin','AdminController@index');
-Route::controller('/admin/user','UserController');
-Route::controller('/admin/type','TypeController');
+//后台登录界面
+Route::controller('/admin/login','AdminloginController');
+Route::group(['middleware'=>'admin'],function (){
+	// 搭建后台
+	Route::get('/admin','AdminController@index');
+	Route::controller('/admin/user','UserController');
+	Route::controller('/admin/type','TypeController');
+	Route::controller('/admin/userinfo','PicnameController');
 
-Route::controller('/admin/goods','GoodsController');
-Route::controller('/admin/picdetail','PicdetailController');
-Route::controller('/admin/orders','OrdersController');
-
+	Route::controller('/admin/goods','GoodsController');
+	Route::controller('/admin/picdetail','PicdetailController');
+	Route::controller('/admin/orders','OrdersController');
+});
 
 
 // 搭建前台
 
+
 // Route::controller('/admin/article','ArticleController');
+
+Route::controller('/admin/article','ArticleController');
+
+
 //测试验证码
 Route::get('/code','LoginController@code');
 //前台登录
@@ -55,6 +64,7 @@ Route::group(['middleware'=>'login'],function (){
 	// 执行添加下单地址
 	Route::controller('/home/address','AddressController');
 });
+Route::controller('/home/forget','forgetController');
 //前台主页
 Route::controller('/home','IndexController');
 

@@ -70,7 +70,7 @@
                     </div>
                     @endif
                     <div class="bt">
-                        <a class="forget" href="https://login.vancl.com/login/GetPwdStep1.aspx">找回密码</a>
+                        <a class="forget" href="/home/forget">找回密码</a>
                         <div class="clear">
                         </div>
                        <!--  <a id="vanclLogin" class="log" href="https://login.vancl.com/login/login.aspx?http%3A%2F%2Fwww.vancl.com%2F%23ref%3Dhead-tcdl#">登 录</a> -->

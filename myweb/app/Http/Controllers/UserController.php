@@ -19,10 +19,9 @@ class UserController extends Controller
     	// if(!$request->input('name')){
     	// 	return back()->withInput();
     	// }
-
     	// 1. 验证表单数据
     	$this->validate($request, [
-	        'username' => 'required|unique:username', // 账号必填
+	        'username' => 'required|unique:users', // 账号必填
 	        'name'=>'required',
 	        'repass'=>'same:pass|required',
 	        'email'=>'required|email'
@@ -43,11 +42,12 @@ class UserController extends Controller
     	// 密码加密,每次密码加密结果都不一样 解密Hash::check();
     	$data['pass']=Hash::make($data['pass']); 
     	$data['token'] =str_random(50); //邮箱注册的身份验证
-
+		
     	// 3.数据插入
     	$res=DB::table('users')->insert($data);
+		
     	if($res){
-    		return redirect('/admin/users/index')->with('success','添加成功'); //session('success'=>'添加成功');
+    		return redirect('/admin/user/index')->with('success','添加成功'); //session('success'=>'添加成功');
     	}else{
     		return back()->with('error','添加失败'); //withInput 闪存
     		//session(['error'=>'添加失败']); session('error');
@@ -57,7 +57,7 @@ class UserController extends Controller
     // 用户的浏览
     public function getIndex(Request $request){
     	// 获取搜索的数据
-    	// dd($request->all());
+    	//dd($request->all());
     	// 查询数据
     	$data=DB::table('users')->where(function($query) use($request){ 
     	// use 给当前匿名函数引入外部的$request变量
