@@ -384,7 +384,7 @@
                         <a href="/home/center/safety" class="track" name="my-left-modifypassword">·账户安全</a>
                     </li>
                     <li class="">
-                        <a href="/home/center/data" class="track" name="my-left-personinfo">·我的资料</a>
+                        <a href="/home/center/data" class="track" name="">·我的资料</a>
                     </li>
                     <li class="no_bg">
                         <a href="/home/center/relevance" class="track" name="my-left-assoaccount">·我的关联账户</a>

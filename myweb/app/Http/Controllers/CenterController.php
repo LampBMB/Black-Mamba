@@ -59,7 +59,8 @@ class CenterController extends Controller
 
 	// 加载我的资料模板
 	public function getData(){
-		return view('center.data');
+		$id = session('home')[0]['id'];
+		return view('center.data',['list'=>DB::table('users')->where('id',$id)->first()]);
 	}
 
 	// 加载礼品卡模板
