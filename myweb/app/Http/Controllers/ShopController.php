@@ -11,7 +11,7 @@ class ShopController extends Controller
 {
     public function getIndex(){
     	// 详情插入到购物车
-    	$userid=1;// session获取当前登录用户的id
+    	$userid=session('home')[0]['id'];// session获取当前登录用户的id
     	$list=DB::table('shopping')->where('userid',$userid)->where('state',1)->get();
     	return view('home.shopping',['list'=>$list]);
     }

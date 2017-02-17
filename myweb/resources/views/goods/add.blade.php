@@ -50,6 +50,22 @@
                     <script id="editor" type="text/plain" style="width:auto;height:300px;" name="descr"></script>
                 </div>
             </div>
+             <div class="mws-form-row">
+                <label class="mws-form-label">主图位置</label>
+                     <div class="mws-form-item">
+                        <ul class="mws-form-list inline">
+                                <li>
+                                    <input type="radio" name="szie" value="0"><label>左</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="szie" value="1"><label>中</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="szie" value="2"><label>右</label>
+                                </li>
+                            </ul>
+                    </div>
+            </div>
             <div class="mws-form-row">
                 <label class="mws-form-label">商品状态</label>
                  <div class="mws-form-item">
@@ -61,11 +77,11 @@
                                 <input type="radio" name="state" value="2"><label>在售</label>
                             </li>
                             <li>
-                                <input type="radio" name="state" value="2"><label>下架</label>
+                                <input type="radio" name="state" value="3"><label>下架</label>
                             </li>
                         </ul>
                 </div>
-            </div>
+           
     		<div class="mws-button-row">
     			<input type="submit" class="btn btn-danger" value="提交">
     			<input type="reset" class="btn " value="重置">

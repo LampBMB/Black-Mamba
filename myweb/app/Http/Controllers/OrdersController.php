@@ -11,32 +11,34 @@ class OrdersController extends Controller
 {   
 	//查看
     public function getIndex(Request $request){
-         $data=DB::table('orders')
-              ->join('users','orders.uid','=','users.id')
-              ->where('orders.status','!=','3')
-              ->where(function($query) use ($request){
-        	//封装搜索条件
-		        	if($request->input('keyword')){
-		        		$query->where('id','like','%'.$request->input('keyword').'%')
-		        		->orwhere('uid','like','%'.$request->input('keyword').'%')
-		        		->orwhere('username','like','%'.$request->input('keyword').'%')
-		        		->orwhere('linkman','like','%'.$request->input('keyword').'%');
-		        	}
-              })
-              ->select('orders.*','users.username')
-              ->paginate($request->input('num',5));
-        //生成分页
-        // $data->render();
-    	//查询所有的商品信息
-    	return view('orders.index',['list'=>$data,'request'=>$request->all()]);
+
+      $userid=1;
+          $data=DB::table('orders')->where('userid',$userid)->get();
+          foreach($data as $k=>$v){
+            if($userid==$v['userid']){
+              $intime=$v['intime'];
+              $aid=$v['addressid'];
+            }
+      $data[$k][]=DB::table('shopping')->where('addtime',$intime)->get();
+      $data[$k][]=DB::table('addresses')->where('id',$aid)->get();
+
+    }
+
+    	return view('orders.index',['data'=>$data]);
     }
     
     //加载修改模板
-    public function getEdit($id){
-     	$data=\DB::table('orders')->where('id',$id)->first();
+    public function getEdit(Request $request){
+      // echo($request->input('id'));
+     	$data=DB::table('orders')->where('id',$request->input('id'))->update(['status'=>2]);
+      if($data){
+        echo 'yes';
+      }else{
+        echo 'no';
+      }
     	// dd($data);
     	// dd($g['goods']);
-    	return view('orders.edit',['vo'=>$data]);
+    	// return view('orders.edit',['vo'=>$data]);
     } 
 
     //修改

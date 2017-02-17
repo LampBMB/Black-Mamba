@@ -12,7 +12,7 @@ class OrderController extends Controller
     // 根据用户登录的id查询用户的下单地址
     public function add(){
     	// session获取当前登录用户的id 
-    	$userid=1;// 当前登录者的下单地址
+    	$userid=session('home')[0]['id'];// 当前登录者的下单地址
         $intime=time();
     	$address=DB::table('addresses')->where('user_id',$userid)->get();
         $oid=DB::table('orders')->insertGetId(['intime'=>$intime]);
@@ -21,6 +21,7 @@ class OrderController extends Controller
     	return view('home.address',['address'=>$address,'shopping'=>$shopping]);
     }
     public function insert(Request $request){
+        // dd($request->all());
         $addtime=time();
     	$data=$request->except('_token','oid','shoptime');
     	$data['addtime']=$addtime;

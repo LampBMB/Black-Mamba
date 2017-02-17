@@ -26,7 +26,7 @@
                                                     <span class="info">{{$v['sheng']}} {{$v['shi']}} {{$v['xian']}}</span>
                                                     <span style="height: 20px; overflow: hidden;">{{$v['jiedao']}}</span>
                                                     <span style="margin:6px 8px;color:#b80000">
-                                                        <input type="radio" name="isdefault" value="1">设为默认收货地址
+                                                        <input type="radio" name="isdefault" value="1">设为收货地址
                                                     </span>
                                                 </div>
                                             </td>
@@ -64,7 +64,7 @@
 
                         <form id="set-addr-form" action="/home/address/add" method="post" class="formadd" style="padding-top:20px">
                             {{csrf_field()}}
-
+                                    <input class="upda" type="hidden" name="updateid">
                             <ol style="padding-left:0px">
                                     <h2 style="margin:12px;font-weight:bold;">添加收货地址</h2>
                                 <li>
@@ -86,16 +86,19 @@
                                     <div><span>*</span> 地 &nbsp; 区：</div>
                                     <div>
                                         <select id="loc_province" name="sheng"></select>
+                                        
                                         <p class="error">请选择省份</p>
                                     </div>
 
                                     <div>
                                     <select id="loc_city" name="shi"></select>
+                                        
                                         <p class="error">请选择市</p>
                                     </div>
 
                                     <div>
                                     <select id="loc_town" name="xian"></select>
+                                        
                                         <p class="error">请选择县/区</p>
                                     </div>
                                 </li>
@@ -168,7 +171,7 @@
                         <!-- express 送货方式 -->
 
                                 <li class="delivery-time-items">
-                                    <div>
+                                    <div class="choose-delivery-selected">
                                         <input id="transferTime-Working" name="express" value="1" class="disnone" checked="checked" type="radio">
                                         <label for="transferTime-Working">周一至周五、工作日送货</label>
                                         <span class="error">请选择送货时间</span>
@@ -206,7 +209,7 @@
                                 <label for="COD">&nbsp;</label>
                         <!-- pay支付方式 -->
                                 <span class="cash-on-delivery-items ">
-                                    <label for="01True" class="cash-css-hdfk zfxz">
+                                    <label for="01True" class="cash-css-hdfk zfxz pay-online-label-selected">
                                         <span class="span1">在线支付</span>
                                         <div class="pay-online">            
                                             <a class="pay-online-bank-list oprate">
@@ -573,6 +576,7 @@
         var info=$(this).html();
         var res=change(info);
         $(this).html(res);
+
     });
 
     function change(info){
@@ -587,14 +591,17 @@
         var xian=xx[0+','+arr[0]+','+arr[1]][arr[2]];
         return sheng+' '+shi+' '+xian;
     }
+        
 
     // 添加地址开关
     $('.tjdz').click(function(){
         $('.addr-form').css('display','block');
+        $('input[name="updateid"]').remove();
     });
  
     $('.list_inland-cancel-edit').click(function(){
         $('.addr-form').css('display','none');
+        $('input[name="updateid"]').remove();
     });
 
     // 订单备注
@@ -630,19 +637,26 @@
             $(this).addClass('addr-selected');
             $(this).find('input[name="isdefault"]').attr('checked','true');
             var addid=$(this).attr('addid');
-            address(addid);
+            $('#dzinput').val(addid);
+            
         });
+
         $(this).hover(function(){
             $(this).find('.oprate').css('display','block');
         },function(){
             $(this).find('.oprate').css('display','none');    
         });
     });
-    function address(addid){
-        console.log(addid);
-        $('#dzinput').val(addid);
-        $('#submit-order-btn').attr('onclick',true);
-    }
+    
+    $('#submit-order-btn').click(function(){
+        var dizik=$('input[name="addressid"]').val();
+       if(dizik==0){
+            $(this).attr('onclick','return false');
+            alert('请确认收货地址');
+       }else{
+            $(this).attr('onclick','return true');
+       }
+    });
 
     // 配送方式 点击选中div
     $('.delivery-time-items div').each(function(){
@@ -670,10 +684,28 @@
     // 地址编辑按钮
     $('.dzbj').each(function(){
         $(this).click(function(){
-            console.log($(this).attr('addid'));
+            var addid=$(this).attr('addid');
             $('.addr-form').css('display','block');
+            fun(addid);
         });
     });
+    function fun(addid){
+        $.ajax({
+            url:'/home/address/update',
+            data:{'addid':addid},
+            type:'get',
+            dataType:'json',
+            success:function(mes){
+                $(mes).each(function(){
+                    $('input[name="updateid"]').val($(this).attr('id'));
+                    $('input[name="name"]').val($(this).attr('name'));
+                    $('input[name="phone"]').val($(this).attr('phone'));
+                    $('input[name="jiedao"]').val($(this).attr('jiedao'));
+                    $('input[name="code"]').val($(this).attr('code'));
+                });
+            }
+        });
+    }
 
     // 地址删除按钮
     $('.dzsc').each(function(){
@@ -691,6 +723,7 @@
 
         });
     });
+
 
 </script>
 @endsection

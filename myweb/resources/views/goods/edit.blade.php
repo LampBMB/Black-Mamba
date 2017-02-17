@@ -68,6 +68,33 @@
                     </script>
                 </div>
             </div>
+              <div class="mws-form-row">
+                <label class="mws-form-label">主图位置</label>
+                 <div class="mws-form-item">
+                    <ul class="mws-form-list inline">
+                            <li>
+                                <input type="radio" name="szie" value="1"
+                                  @if($vo['szie']=='0')
+                                     checked
+                                  @endif
+                                ><label>左</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="szie" value="2"
+                                  @if($vo['szie']=='1')
+                                     checked
+                                  @endif
+                                ><label>中</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="szie" value="3"
+                                   @if($vo['szie']=='2')
+                                     checked
+                                   @endif
+                                ><label>右</label>
+                            </li>
+                        </ul>
+                </div>
             <div class="mws-form-row">
                 <label class="mws-form-label">商品状态</label>
                  <div class="mws-form-item">

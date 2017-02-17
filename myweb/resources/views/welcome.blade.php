@@ -18,40 +18,41 @@
 <!-- 春季特惠倒计时结束 -->  
 
 <!-- 新品推荐区 -->
+  
     <div class=" piclist shangzhuanglist shangzhuanglist_top clear">
         <h2>新品推荐</h2>
+        @foreach($list as $k=>$v)
         <ul>
+         
+          @if($v['szie']==0)
             <li class="pic_one">
-                <a href="http://item.vancl.com/6375528.html" target="_blank">
-                    <img src="/ho/index/1g.jpg" alt="Beyond closet 卫衣 PARIS 粉色 " border="0">
+                <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                    <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 PARIS 粉色 " border="0" width='590' height='440'>
                 </a>
-                <h3><span>359<em></em>元</span>卫衣 PARIS</h3>
+                <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
             </li>
-
+          @elseif($v['szie']==1)
             <li class="pic_two">
                 <div>
-                    <a href="http://item.vancl.com/6375526.html" target="_blank">
-                        <img src="/ho/index/3g.jpg" alt="Beyond closet 卫衣 CAN CAN 黑色 ">
+                    <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                        <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 CAN CAN 黑色 " width='290' height='175'>
                     </a>
-                    <h3><span><em>359</em>元</span>卫衣CORD DOG</h3>
-                </div>
-                
-                <div>
-                    <a href="http://item.vancl.com/6375525.html" target="_blank">
-                        <img src="/ho/index/2g.jpg" alt="Beyond closet 卫衣 CORD DOG 海军蓝">
-                    </a>
-                    <h3><span><em>359</em>元</span>卫衣CAN CAN</h3>
+                    <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
                 </div>
             </li>
+          @else
 
             <li class="pic_three" style="margin-right: 0px;">
-                <a href="http://item.vancl.com/6375554.html" target="_blank">
-                    <img src="/ho/index/4g.jpg" alt="Beyond closet 卫衣 POP ART DOG 粉色">
+                <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                    <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 POP ART DOG 粉色" width='286' height='440' style='margin-top:-261px'>
                 </a>
-                <h3><span><em>359</em>元</span>卫衣POP ART DOG</h3>
+                <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
             </li>
+            @endif
         </ul>
+         @endforeach
     </div>
+   
 <!-- 新品推荐结束 -->
             
     <script type="text/javascript">
@@ -158,14 +159,14 @@
                 var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60);
                 var cc = document.getElementById(divname);
                 //cc.innerHTML = "倒计时"+day1+"天"+hour+"时"+minute+"分"+second+"秒"; 
-                cc.innerHTML = "倒计时：<span style='margin-right:3px;'>" + day1 + "<em style='font-size:16px;padding-left:5px;'>天</em></span> <span style='margin-right:3px;'>" + (hour > 10 ? hour: "0" + hour) + "<em style='font-size:16px;padding-left:5px;'>小时</em></span> <span style='margin-right:3px;'>" + (minute > 10 ? minute: "0" + minute) + "<em style='font-size:16px;padding-left:5px;'>分</em></span>";
+                cc.innerHTML = "倒计时：<span style='margin-right:3px;'>" + day1 + "<em style='font-size:16px;padding-left:5px;'>天</em></span> <span style='margin-right:3px;'>" + (hour > 10 ? hour: "0" + hour) + "<em style='font-size:16px;padding-left:5px;'>小时</em></span> <span style='margin-right:3px;'>" + (minute > 10 ? minute: "0" + minute) + "<em style='font-size:16px;padding-left:5px;'>分</em></span> <span style='margin-right:3px;'>" + (second >= 10 ? second: "0" + second) + "<em style='font-size:16px;padding-left:5px;'>秒</em></span>";
             } else {
                 $(".getMoney").hide();
             }
 
         }
         window.setInterval(function() {
-            ShowCountDown(2017, 02, 14, 'countdown');
+            ShowCountDown(2017, 04, 14, 'countdown');
         },
         interval);
     </script>
@@ -179,73 +180,68 @@
 
     <!-- 超值精选区 -->
         <div class=" piclist shangzhuanglist shangzhuanglist_top clear">
-            <div class="getMoney"><img src="/ho/index/cz.jpg"></div>
-            <ul>
-                <li class="pic_one">
-                    <a href="http://item.vancl.com/6375250.html" target="_blank">
-                        <img src="/ho/index/1.jpg" alt="凡客羽绒服 轻暖95绒 立领 女款 ">
-                    </a>
-
-                    <h3><span>充值购买<em>184</em>元</span>羽绒服 轻暖95绒 连帽</h3>
-                </li>
-                <li class="pic_two">
-                    <div>
-                        <a href="http://item.vancl.com/6375118.html" target="_blank">
-                            <img src="/ho/index/2.jpg" alt="凡客羽绒服 轻暖95绒 立领 男款">
-                        </a>
-                        <h3><span>充值购买<em>109</em>元</span>衬衫 弹力修身 小方领</h3>
-                    </div>
-                    <div>
-                        <a href="http://item.vancl.com/6375279.html" target="_blank">
-                            <img src="/ho/index/3.jpg" alt="凡客80免烫衬衫 小方领">
-                        </a>
-                        <h3><span>充值购买<em>79</em>元</span>衬衫 法兰绒 男款</h3>
-                    </div>
-                </li>
-                <li class="pic_three" style="margin-right: 0px;">
-                    <a href="http://item.vancl.com/6375330.html" target="_blank">
-                        <img src="/ho/index/4.jpg" alt="凡客衬衫 法兰绒 领尖扣 男款 ">
-                    </a>
-                    <h3><span>充值购买<em>184</em>元</span>羽绒服 轻暖95绒 立领</h3>
-                </li>
-            </ul>
+            <div class="getMoney" style='display:block'><img src="/ho/index/cz.jpg"></div>
+               @foreach($list1 as $k=>$v)
+                    <ul>
+                      @if($v['szie']==0)
+                        <li class="pic_one">
+                            <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 PARIS 粉色 " border="0" width='590' height='440'>
+                            </a>
+                            <h3><span>{{$v['price']}}<em></em>元</span>{{$v['goods']}}</h3>
+                        </li>
+                      @elseif($v['szie']==1)
+                        <li class="pic_two">
+                            <div>
+                                <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                    <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 CAN CAN 黑色 " width='290' height='175'>
+                                </a>
+                                <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
+                            </div>
+                        </li>
+                      @else
+                        <li class="pic_three" style="margin-right: 0px;">
+                            <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 POP ART DOG 粉色" width='286' height='440' style='margin-top:-261px'>
+                            </a>
+                            <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
+                        </li>
+                        @endif
+                    </ul>
+                @endforeach
         </div>
     <!-- 超值精选区结束 -->
-
-    <!-- 裤装区 -->
-        <div class=" piclist kuzhuanglist clear">
-            <ul>
-                <li>
-                    <a href="http://item.vancl.com/6375238.html" target="_blank">
-                        <img src="/ho/index/0204-9.jpg" alt="休闲裤 全棉直筒">
-                    </a>
-                    <h3><span>充值购买<em>84.5</em>元</span>休闲裤 全棉直筒</h3>
-                </li>
-                <li>
-                    <div>
-                        <a href="http://item.vancl.com/6375235.html" target="_blank">
-                            <img src="/ho/index/0204-10.jpg" alt="弹力灯芯绒">
-                        </a>
-                        <h3><span>充值购买<em>84.5</em>元</span>弹力灯芯绒</h3>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="http://item.vancl.com/6375379.html" target="_blank">
-                            <img src="/ho/index/0204-11.jpg" alt="凡客牛仔裤 弹力修身 女款">
-                        </a>
-                        <h3><span>充值购买<em>89.5</em>元</span>牛仔裤 弹力修身</h3>
-                    </div>
-                </li>
-                <li style="margin-right: 0px;">
-                    <a href="http://item.vancl.com/6375372.html" target="_blank">
-                        <img src="/ho/index/0210-12.jpg" alt="重水洗锥形拼接">
-                    </a>
-                    <h3><span>充值购买<em>84.5</em></span>重水洗针织锥形拼接</h3>
-                </li>
-            </ul>
+     <div class=" piclist shangzhuanglist shangzhuanglist_top clear">
+            <div class="getMoney"><img src="/ho/index/sy02.jpg"></div>
+               @foreach($list2 as $k=>$v)
+                    <ul>
+                      @if($v['szie']==0)
+                        <li class="pic_one">
+                            <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 PARIS 粉色 " border="0" width='590' height='440'>
+                            </a>
+                            <h3><span><em>{{$v['price']}}<em></em>元</span>{{$v['goods']}}</h3>
+                        </li>
+                      @elseif($v['szie']==1)
+                        <li class="pic_two">
+                            <div>
+                                <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                    <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 CAN CAN 黑色 " width='290' height='175'>
+                                </a>
+                                <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
+                            </div>
+                        </li>
+                      @else
+                        <li class="pic_three" style="margin-right: 0px;">
+                            <a href="/home/gt/gooddetails/{{$v['id']}}" target="_blank">
+                                <img src="{{$v["picname"]}}" alt="Beyond closet 卫衣 POP ART DOG 粉色" width='286' height='440' style='margin-top:-261px'>
+                            </a>
+                            <h3><span><em>{{$v['price']}}</em>元</span>{{$v['goods']}}</h3>
+                        </li>
+                        @endif
+                    </ul>
+                @endforeach
         </div>
-    <!-- 库装区结束 -->
     </div>
 <!-- 超值精选与裤装 -->
 @endsection

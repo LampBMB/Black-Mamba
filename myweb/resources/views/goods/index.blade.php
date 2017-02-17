@@ -53,6 +53,7 @@
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 133px;" aria-label="Browser: activate to sort column ascending">商品名称</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 124px;" aria-label="Platform(s): activate to sort column ascending">商品价格</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 82px;" aria-label="Engine version: activate to sort column ascending">商品图片</th>
+				     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">主图位置</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">购买数量</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">添加时间</th>
 				    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 56px;" aria-label="CSS grade: activate to sort column ascending">修改时间</th>
@@ -72,6 +73,15 @@
 				        <td class=" ">{{$v['goods']}}</td>
 				        <td class=" ">{{$v['price']}}</td>
 				        <td class=" "><img src="{{$v['picname']}}" width='50px' alt=""></td>
+				          <td class=" ">
+				        	@if($v['szie']=='0')
+				        		 左
+							@elseif($v['szie']=='1')
+							     中
+						    @else
+						         右
+							@endif
+				        </td>
 				        <td class=" ">{{$v['num']}}</td>
 				        <td class=" ">{{$v['created_at']}}</td>
 				        <td class=" ">{{$v['updated_at']}}</td>
