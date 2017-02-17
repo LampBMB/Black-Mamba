@@ -36,6 +36,9 @@ class LoginController extends Controller
     		//验证账号密码是否正确(哈希验证)
     		$repass =Hash::check($pass,DB::table('users')->value('pass'));
     		if($repass){
+				if($rename[0]['status']==0){
+					return back()->with('error','该账号已停用,无法登陆！');
+				}
     			session(['home'=>$rename]);
     			return redirect('/home')->with('success','登录成功');
     		}else{
@@ -55,6 +58,7 @@ class LoginController extends Controller
     }
     //快速登录执行手机验证码
     public function getPhone(Request $request){
+        
     	$curl = new \Curl\Curl();
 		$code = rand(0000,9999);
 		session(['phonecode'=>$code]);

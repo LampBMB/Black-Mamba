@@ -15,6 +15,10 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+		if(session('home')){
+            return $next($request);
+        }else{
+            return redirect('/admin/login');
+        }
     }
 }

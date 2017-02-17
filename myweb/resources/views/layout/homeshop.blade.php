@@ -37,7 +37,7 @@
                     <div class="account">
 					    @if(session('home'))
                             <div id="welcome" class="top loginArea">您好,
-                                <a href="/home/center/index" class="top track" name="head-denglu" style="color: rgb(51, 51, 51);">{{session('home')[0]['username']}}</a>
+                                <a href="/home/userinfo" class="top track" name="head-denglu" style="color: rgb(51, 51, 51);">{{session('home')[0]['username']}}</a>
                                 <span style="color: #a10000">
                                     <a class="top track" style="color: #a10000" href="/home/login/outlogin" target="_parent">退出登录</a>&nbsp;|&nbsp;
                                     <a class="track" name="head-ghyh" href="javascript:VANCL.Global.login();" style="color: #a10000">更换用户</a></span>

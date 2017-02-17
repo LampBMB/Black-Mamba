@@ -14,18 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//后台登录界面
+Route::controller('/admin/login','AdminloginController');
+Route::group(['middleware'=>'admin'],function (){
+	// 搭建后台
+	Route::get('/admin','AdminController@index');
+	Route::controller('/admin/user','UserController');
+	Route::controller('/admin/type','TypeController');
+	Route::controller('/admin/userinfo','PicnameController');
+
+	Route::controller('/admin/goods','GoodsController');
+	Route::controller('/admin/picdetail','PicdetailController');
+	Route::controller('/admin/orders','OrdersController');
+});
 
 
-
-
-// 搭建后台
-Route::get('/admin','AdminController@index');
-Route::controller('/admin/user','UserController');
-Route::controller('/admin/type','TypeController');
-
-Route::controller('/admin/goods','GoodsController');
-Route::controller('/admin/picdetail','PicdetailController');
-Route::controller('/admin/orders','OrdersController');
 
 // 搭建前台
 // 个人中心
@@ -62,6 +65,7 @@ Route::group(['middleware'=>'login'],function (){
 	//前台个人中心
 	Route::controller('/home/center','CenterController');
 });
+Route::controller('/home/forget','forgetController');
 //前台主页
 Route::controller('/home','IndexController');
 

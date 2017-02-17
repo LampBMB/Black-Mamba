@@ -18,6 +18,7 @@ class RegisterController extends Controller
 		$code = $request->input('phonecode');
 		$pass = $request->input('phonepass');
 		$rephonepass = $request->input('rephonepass');
+		$status = 1;
 		if($pass!=$rephonepass){
 			return back()->with('error','两次密码输入不一致');
 		}
@@ -25,7 +26,7 @@ class RegisterController extends Controller
 		if($code!=session('phonecode')){
 			return back()->with('error','手机验证码不正确');
 		}
-		if(DB::table('users')->insert(['username'=>$name,'pass'=>$pass])){
+		if(DB::table('users')->insert(['username'=>$name,'pass'=>$pass,'status'=>1])){
 			$data = DB::table('users')->where('username',$name)->get();
 			session(['home'=>$data]);
 			return redirect('/home')->with('success','注册成功');
